@@ -1,7 +1,7 @@
 import os
 import re
 import sys
-import argparse
+# argparse removed: configuration will be in-script as constants below
 import datetime
 import pandas as pd
 
@@ -10,6 +10,18 @@ def write_log(log_file, msg):
     timestamp = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
     with open(log_file, "a", encoding="utf-8") as f:
         f.write(f"{timestamp} {msg}\n")
+
+
+# --------------------------
+# USER CONFIG (edit these)
+# --------------------------
+# Folder containing .xlsx files to process (relative or absolute)
+INPUT_FOLDER = r"extractedDataset/2082MV"
+# Folder where processed files will be written
+OUTPUT_FOLDER = r"structuredDataset/2082MV"
+# Log file path
+LOG_FILE = "date_structure_log.txt"
+
 
 
 def bs_to_ad(bs_y, bs_m, bs_d):
@@ -52,8 +64,16 @@ def bs_to_ad(bs_y, bs_m, bs_d):
 
 
 def extract_bs_from_sheetname(sheet_name):
-    """Find BS date pattern in sheet name like 2079.02.02 or 2079.2.2"""
-    m = re.search(r"(\d{4})[\.\-\s_]*(\d{1,2})[\.\-\s_]*(\d{1,2})", sheet_name)
+    """Find BS date pattern in sheet name like 2079.02.02 or 2079.2.2.
+    The function first strips suffixes like '{11KV}', '(11KV)', case-insensitive,
+    and then searches for the first occurrence of a YYYY.MM.DD (or variants) pattern.
+    """
+    # remove {11KV} or (11KV) variants (allow spaces and case-insensitive)
+    cleaned = re.sub(r"[\{\(]\s*11kv\s*[\}\)]", "", sheet_name, flags=re.IGNORECASE)
+    # also remove any trailing text like extra braces/spaces
+    cleaned = cleaned.strip()
+
+    m = re.search(r"(\d{4})[\.\-\s_]*(\d{1,2})[\.\-\s_]*(\d{1,2})", cleaned)
     if not m:
         return None
     return int(m.group(1)), int(m.group(2)), int(m.group(3))
@@ -212,25 +232,20 @@ def process_file(in_path, out_path, log_file):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Convert BS-dated sheet names to AD and normalize 24-hour MW series")
-    parser.add_argument("input_folder", help="Folder containing .xlsx files to process")
-    parser.add_argument("output_folder", help="Folder where processed files will be written")
-    parser.add_argument("--log", default="date_structure_log.txt", help="Log file path")
-    args = parser.parse_args()
-
-    os.makedirs(args.output_folder, exist_ok=True)
+    # Use the constants defined at the top of the file: INPUT_FOLDER, OUTPUT_FOLDER, LOG_FILE
+    os.makedirs(OUTPUT_FOLDER, exist_ok=True)
     # clear or create log
-    open(args.log, 'w', encoding='utf-8').close()
+    open(LOG_FILE, 'w', encoding='utf-8').close()
 
-    for fname in os.listdir(args.input_folder):
+    for fname in os.listdir(INPUT_FOLDER):
         if not fname.endswith('.xlsx'):
             continue
-        in_path = os.path.join(args.input_folder, fname)
-        out_path = os.path.join(args.output_folder, fname)
+        in_path = os.path.join(INPUT_FOLDER, fname)
+        out_path = os.path.join(OUTPUT_FOLDER, fname)
         try:
-            process_file(in_path, out_path, args.log)
+            process_file(in_path, out_path, LOG_FILE)
         except Exception as e:
-            write_log(args.log, f"ERROR processing {fname}: {e}")
+            write_log(LOG_FILE, f"ERROR processing {fname}: {e}")
 
     print("Processing completed. See log for details.")
 
