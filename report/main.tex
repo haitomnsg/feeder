@@ -1,0 +1,243 @@
+﻿% IOE MSC Latex Template by
+% Santosh Giri, Assistant Professor, DOECE, Pulchowk Campus, IOE, TU
+\documentclass[12pt,oneside]{report}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[numbers]{natbib}%referencing
+\usepackage[left=1.0in,right=1.0in,top=.8in,bottom=.8in]{geometry}
+\usepackage{float}
+\linespread{1.3}
+\usepackage{graphicx}%figures
+\usepackage{rotating}%landscape
+\usepackage{amsmath}%math
+\usepackage{titlesec} %formatting chapters
+%\titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing*{\chapter}{-15pt}{10pt}{15pt}
+\titlespacing*{\section}{0pt}{0pt}{5pt}
+\titlespacing*{\subsection}{0pt}{5pt}{5pt}
+\titleformat{\chapter}[hang]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter.}{1em}{}
+\renewcommand{\chaptername}{}
+\graphicspath{{Images/}}%image folder name
+%Cover page contents
+\title{
+{\includegraphics[scale=.3]{logotu.jpg}}\\
+{\large\uppercase{
+    Tribhuvan University\\
+    Institute of Engineering\\
+    Pulchowk Campus\\
+    \vspace{.5cm}
+    A Thesis Report On\\Short-Term Electrical Load Forecasting for\\Baneshwor Feeder Using Machine and Deep Learning Models\\
+    \vspace{.5cm}
+    \textbf{Submitted By:}\\Sujit Koirala\\(PUL075MSPSE016)\\
+    \vspace{.5cm}
+    \textbf{Supervised By:}\\ Prof. Dr. Rogers s Pressman\\
+    \vspace{.5cm}
+    \textbf{Submitted To:}\\ Department of Electrical Engineering
+}}}
+\author{}
+\date{December, 2025} %{Month Year}
+\begin{document}
+\maketitle
+
+\pagenumbering{roman}
+\setcounter{page}{2}
+\chapter*{Declaration}
+\addcontentsline{toc}{chapter}{\numberline{}Declaration}
+I hereby declare that this study/research entitled \textbf{[Put the title of the project/thesis here....]} is based on our original research work. Related works on the topic by other researchers have been duly acknowledged. I owe all the liabilities relating to the accuracy and authenticity of the data and any other information included hereunder.
+\vspace{2cm}\\
+\textbf{Name of the Student ( Roll no)}\\
+\newline
+Date:
+\chapter*{Recommendation}
+\addcontentsline{toc}{chapter}{\numberline{}Recommendation}
+This is to certify that this project report entitled \textbf{[Put the title of the project/thesis here]} prepared and submitted by \textbf{[Put the name \& roll no of the student here]}, in partial fulfillment of the requirements of the Master degree of Engineering in......, awarded by Tribhuvan University, has been completed under my/our supervision. I/we recommend the same for acceptance by Tribhuvan University.
+\vspace{75pt}\\
+-----------------------------------\\
+Name of the Supervisor: ABC\\
+Designation: ABC\\
+Organization: ABC\\
+Date: ABC\\
+\vspace{20pt}\\
+-----------------------------------\\
+Name of the Co-supervisor: ABC\\
+Designation: ABC\\
+Organization: ABC\\
+Date: ABC\\
+\chapter*{Page of Approval}
+\addcontentsline{toc}{chapter}{\numberline{}Page of Approval}
+\vspace{1.5cm}
+\begin{center}
+\uppercase{
+Tribhuvan Universiy\\
+Institute of Engineering\\
+Pulchowk Campus\\
+Department of Electronics and Computer Engineering
+    }
+    \end{center}
+\vspace{.5cm}
+This project/thesis entitled \textbf{[Put the title of the project/thesis here]}
+prepared and submitted by \textbf{[Put the Name and Roll no of the student here]} has been examined
+by us and is accepted for the award of the Master's degree in [Put name of the program]
+by Tribhuvan University.
+
+\vspace{2cm}
+\begin{minipage}{.5\textwidth}
+        \raggedright
+    .............................\\
+    Supervisor\\
+    \textbf{Name}\\
+    Designation\\
+    Organization Name and Address.\\
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+    \raggedleft
+    .............................\\
+    External examiner\\
+    \textbf{Name}\\
+    Designation\\
+    Organization Name and Address.\\
+    \end{minipage}\\
+    \vspace{.8cm}
+    \begin{center}
+    .............................\\
+    Co-Supervisor (if Any)\\
+    \textbf{Name}\\
+    Designation\\
+    Organization Name and Address.\\
+    \vspace{.6cm}
+    \end{center}
+\centerline{Date of approval:}
+%new chapter
+\chapter*{Copyright}
+\addcontentsline{toc}{chapter}{\numberline{}Copyright}
+The author has agreed that the Library, Department of Electronics and Computer Engineering, Pulchowk Campus, and Institute of Engineering may make this report available for inspection. Moreover, the author has agreed that permission for extensive copying of this project report for scholarly purposes may be granted by the supervisors who supervised the work recorded herein or, in their absence, by the Head of the Department wherein the project report was done. It is understood that recognition will be given to the author of this report and the Department of Electronics and Computer Engineering, Pulchowk Campus, Institute of Engineering for any use of the material of this project report. Copying publication or the other use of this report for financial gain without the approval of the Department of Electronics and Computer Engineering, Pulchowk Campus, Institute of Engineering, and the author's written permission is prohibited.\\
+Request for permission to copy or to make any other use of the material in this report in whole or in part should be addressed to:\\
+\newline
+\newline
+\newline
+Head\\
+Department of Electronics and Computer Engineering\\
+Pulchowk Campus, Institute of Engineering, TU\\
+Lalitpur, Nepal.
+%new chapter
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{\numberline{}Acknowledgements}
+I would like to express my sincere gratitude to my supervisor and faculty members of the
+Department of Electrical Engineering for their valuable guidance, continuous support, and
+encouragement throughout the course of this project. Their technical insights and
+constructive feedback were instrumental in shaping this work.
+I am also thankful to the Nepal Electricity Authority and relevant data-providing institutions
+for making the load and meteorological data available for this study. Their cooperation
+greatly contributed to the successful completion of the analysis.
+Special thanks go to my friends and colleagues for their support, discussions, and motivation
+during the project period. Finally, I would like to express my heartfelt appreciation to my
+family for their constant encouragement and support throughout my academic journey.
+\vspace{50pt}\\
+\textbf{Sujit Koirala (PUL075MSPSE016)}\\
+%new chapter
+\chapter*{Abstract}
+\noindent Accurate short-term electrical load forecasting plays a crucial role in the efficient planning
+and operation of modern power systems. With increasing load variability influenced by
+weather conditions, temporal patterns, and socio-economic activities, traditional statistical
+methods often struggle to capture complex and nonlinear demand behavior. This project
+focuses on short-term electrical load forecasting for the Lekhnath Feeder using machine
+learning--based approaches.
+
+\noindent Historical hourly load data, along with meteorological variables such as air temperature,
+global solar radiation, and relative humidity, were used to develop predictive models.
+Comprehensive data preprocessing was performed, including missing value imputation,
+outlier treatment, temporal feature extraction, and cyclical encoding of time-based
+variables. Several machine learning models were implemented and evaluated, including
+Linear Regression, Ridge Regression, Support Vector Regression, Random Forest, Gradient
+Boosting, and XGBoost. Hyperparameter tuning was applied to improve model
+performance.
+
+\noindent The models were assessed using standard evaluation metrics such as Mean Absolute Error
+(MAE), Root Mean Square Error (RMSE), Mean Absolute Percentage Error (MAPE), and
+R-squared ($R^2$). The results show that ensemble-based models, particularly tuned
+XGBoost and Random Forest models, significantly outperform linear and baseline
+methods. The findings highlight the effectiveness of machine learning techniques for
+feeder-level short-term load forecasting and provide valuable insights for operational
+planning and decision-making in power distribution systems.\\
+\newline
+Keywords: \textit{short-term load forecasting, machine learning, XGBoost, Random Forest, power distribution systems}
+\addcontentsline{toc}{chapter}{\numberline{}Abstract}
+\tableofcontents
+\addcontentsline{toc}{chapter}{\numberline{}Contents}
+\listoffigures
+\addcontentsline{toc}{chapter}{\numberline{}List of Figures}
+\listoftables
+\addcontentsline{toc}{chapter}{\numberline{}List of Tables}
+\chapter*{List of Abbreviations}
+\addcontentsline{toc}{chapter}{\numberline{}List of Abbreviations}
+\begin{tabular}{c l}
+\textbf{NEA}     &  Nepal Electricity Authority\\
+\textbf{STLF}    &  Short-Term Load Forecasting\\
+\textbf{ML}      &  Machine Learning\\
+\textbf{DL}      &  Deep Learning\\
+\textbf{RNN}     &  Recurrent Neural Network\\
+\textbf{LSTM}    &  Long Short-Term Memory\\
+\textbf{GRU}     &  Gated Recurrent Unit\\
+\textbf{MLP}     &  Multi-Layer Perceptron\\
+\textbf{SVR}     &  Support Vector Regression\\
+\textbf{RF}      &  Random Forest\\
+\textbf{GBR}     &  Gradient Boosting Regressor\\
+\textbf{XGBoost} &  Extreme Gradient Boosting\\
+\textbf{MAE}     &  Mean Absolute Error\\
+\textbf{MSE}     &  Mean Squared Error\\
+\textbf{RMSE}    &  Root Mean Squared Error\\
+\textbf{MAPE}    &  Mean Absolute Percentage Error\\
+\textbf{SMAPE}   &  Symmetric Mean Absolute Percentage Error\\
+\textbf{R\textsuperscript{2}}      &  Coefficient of Determination\\
+\textbf{MW}      &  Megawatt\\
+\textbf{BS}      &  Bikram Sambat (Nepali Calendar)\\
+\textbf{AD}      &  Anno Domini (Gregorian Calendar)\\
+\textbf{EDA}     &  Exploratory Data Analysis\\
+\textbf{IQR}     &  Interquartile Range\\
+\textbf{TFT}     &  Temporal Fusion Transformer\\
+\textbf{API}     &  Application Programming Interface
+\end{tabular}
+\chapter*{List of units and conversions}
+\addcontentsline{toc}{chapter}{\numberline{}List of Units and conversions}
+\begin{tabular}{l l}
+$m^3$   &   Meter cube (Cubic meter)\\
+Sq.ft   &   Square feet\\
+add     &   more
+\end{tabular}
+\chapter{Introduction}
+\pagenumbering{arabic}%start arabic numbering(1,2,3..) from here
+This chapter should discuss the background of the research issues being dealt with, the statement of the problem, research questions, research objectives, significance/rationale of the study, and scope and limitation of the study. The introduction must revolve around the central research issue.
+\section{Background}
+A brief background of the issues should be discussed in the background section. It should be done in the form of a brief literature review of related literature, which is essential to build a statement of the problem, research question, and research objectives in the later part of the INTRODUCTION chapter.
+\section{Statement of the problem}
+This section must indicate what the problem is, why, and how it is a problem. Similarly, the necessity to conduct the research should also be discussed. It should be supported by data or pieces of evidence. This section should be well connected with the background section and as brief as possible.
+\section{Research questions}
+Based on the statement of the problem research question should be formulated. Research questions should clearly state what type of answers the research is looking for.
+\section{Research objectives}
+This section should mention what you want to achieve from the research. Usually, the objective is presented as general objective and specific objectives. The general objective of the research should be only one and should be in line with the title. To meet the general objective, several specific objectives could be set. Specific objectives should be in line with the research questions and are more or less equal in the number of research questions.
+\section{Significance/Rationale of the study}
+The importance of the proposed research should be stated in this section, in terms of potential beneficiaries \& the way they will be benefited. The section should focus on justifying the topic of the proposed research.
+\chapter{Literature Review}
+A literature review is a survey of published materials on the topic of interest authored by accredited scholars and researchers. It is quite important to uncover what is already known in the body of knowledge before initiating any research (Hart, 1998). Hence, it is a crucial endeavor for any academic research in theoretical and conceptual progress (Shaw, 1995 and, Webster and Watson, 2002). Thus, it helps to situate your research in the context of what is already known about the topic and find the gap that your research will bridge.
+\section{Related work}
+\section{Related theory}
+\chapter{Methodology}
+This chapter includes a discussion about the way you conducted your thesis research to meet the objectives. The methodology should be summarized in the form of a block diagram /flowchart. The selected method should be discussed in detail along with the justification for selecting the methodology. Each method used in the thesis should be directly and specifically linked with the research objectives. It should include research design (historical research, experimental research, field research, and survey research), research approaches (qualitative, quantitative), study area, study population, sample selection (sample selection methods), sample size, methods of data collection (Key Informant Interview, Focused Group Discussion, questionnaire survey, modeling, observation, measurement) and data analysis approach \& tools.
+\chapter{Experimental Setup (if any)}
+In this section, you describe how the experiment was done and summarize how the data was taken. One typically describes the instruments and detectors that were used. Describe the procedure that was followed to collect the data etc.
+\chapter{Results \& Discussion}
+This section should present the findings of the study in logical sequences in line with the specific objectives. The presentation of data and facts should be explained regarding plausibility and compared with data from similar studies. The causal factors behind the findings should be discussed about other variables under consideration in the study based on Focused Group Discussion (FGD), Key Informant Interview (KII), questionnaire survey, modeling, observation, measurement, or literature reviews.
+\chapter{Conclusions \& Recommendations}
+The conclusion is an integration of various issues covered in the body of the thesis. The conclusion includes noting any implications resulting from the discussion and making policy recommendations and the need for further research. Hence, the conclusion should be a logical ending to what has been previously discussed. It must pull together all parts of the argument and refer the reader back to the focus you have outlined in your introduction and to the central topic. Never present any new information in this section. Thus, the conclusion and recommendation of the study must be limited within the scope of the research.
+\chapter{Limitations and Future enhancement}
+This chapter should contain the major limitations of the project and the further enhancement of the project/research shortly with a different but related approach. \textbf{Referencing checking here}\cite{giri2019transfer}
+\addcontentsline{toc}{section}{References}
+\renewcommand{\bibname}{References}
+\bibliographystyle{unsrt}
+\bibliography{ref}
+\chapter*{Appendices}
+\addcontentsline{toc}{section}{APPENDICES}
+This page contains a data sheet, coding, procedure, photograph, questionnaire, and other essential documents. This page should be started from an odd page and APPENDIX numbering should be A, B, C, etc.
+\end{document}
