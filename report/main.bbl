@@ -1,9 +1,123 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{giri2019transfer}
-Santosh Giri and Basanta Joshi.
-\newblock Transfer learning based image visualization using cnn.
-\newblock {\em International Journal of Artificial Intelligence \&
-  Applications}, 10(4):47--55, 2019.
+\bibitem{singla2019electrical}
+M.~K. Singla, J.~Gupta, P.~Nijhawan, and A.~S. Oberoi.
+\newblock Electrical load forecasting using machine learning.
+\newblock {\em International Journal}, 8(3), 2019.
+
+\bibitem{desai2021electrical}
+S.~Desai, T.~Dalal, S.~Kadam, and S.~Mishra.
+\newblock Electrical load forecasting using machine learning.
+\newblock In {\em 2021 International Conference on System, Computation,
+  Automation and Networking (ICSCAN)}, pages 1--6, 2021.
+
+\bibitem{matrenin2022medium}
+P.~Matrenin, M.~Safaraliev, S.~Dmitriev, S.~Kokin, A.~Ghulomzoda, and
+  S.~Mitrofanov.
+\newblock Medium-term load forecasting in isolated power systems based on
+  ensemble machine learning models.
+\newblock {\em Energy Reports}, 8:612--618, 2022.
+
+\bibitem{aguilar2021short}
+E.~Aguilar~Madrid and N.~Antonio.
+\newblock Short-term electricity load forecasting with machine learning.
+\newblock {\em Information}, 12(2), 2021.
+
+\bibitem{guo2021machine}
+W.~Guo, L.~Che, M.~Shahidehpour, and X.~Wan.
+\newblock Machine learning-based methods in short-term load forecasting.
+\newblock {\em The Electricity Journal}, 34(1):106884, 2021.
+
+\bibitem{saglam2024instantaneous}
+M.~Saglam, X.~Lv, C.~Spataru, and O.~A. Karaman.
+\newblock Instantaneous electricity peak load forecasting using optimization
+  and machine learning.
+\newblock {\em Energies}, 17(4), 2024.
+
+\bibitem{jain2024comparative}
+S.~Jain and A.~Gupta.
+\newblock Comparative analysis of machine learning algorithms for short-term
+  power load prediction.
+\newblock {\em International Journal of Energy Systems}, 19(2):55--68, 2024.
+
+\bibitem{chapagain2021short}
+K.~Chapagain, S.~Acharya, H.~Bhusal, S.~Katuwal, O.~Lakhey, P.~Neupane, R.~K.
+  Sah, B.~Tamang, and Y.~Rajbhandari.
+\newblock Short-term electricity demand forecasting for kathmandu valley,
+  nepal.
+\newblock {\em Kathmandu University Journal of Science, Engineering and
+  Technology}, 15(3), 2021.
+
+\bibitem{acharya2021stlf}
+S.~Acharya, M.~C. Luintel, and M.~Badrudoza.
+\newblock Short-term load forecasting of gothatar feeder of nepal electricity
+  authority using recurrent neural network.
+\newblock {\em Unpublished manuscript}, n.d.
+
+\bibitem{cordeiro2023load}
+M.~Cordeiro-Costas, D.~Villanueva, P.~Egu{\'i}a-Oller,
+  M.~Mart{\'i}nez-Comesa{\~n}a, and S.~Ramos.
+\newblock Load forecasting with machine learning and deep learning methods.
+\newblock {\em Applied Sciences}, 13(13):7933, 2023.
+
+\bibitem{dong2024decade}
+X.~Dong, Z.~Li, L.~Sun, and Y.~Zhang.
+\newblock A decade of deep learning-based short-term electricity load
+  forecasting: A comprehensive review.
+\newblock {\em Energy AI}, 8:100212, 2024.
+
+\bibitem{wen2024gru}
+J.~Wen, H.~Li, and T.~Zhao.
+\newblock Gru--tcn hybrid neural network with attention for short-term load
+  forecasting.
+\newblock {\em Energy}, 290:130423, 2024.
+
+\bibitem{alhussein2020cnn}
+O.~Alhussein, K.~Aurangzeb, S.-B. Kim, and J.-H. Baek.
+\newblock Convolutional neural network and long short-term memory hybrid deep
+  learning model for individual load forecasting.
+\newblock {\em Energies}, 13(19), 2020.
+
+\bibitem{hasanat2024parallel}
+H.~Hasanat, A.~Biswas, and M.~Abdullah.
+\newblock Parallel multichannel cnn--bilstm architecture for smart-grid load
+  forecasting.
+\newblock {\em IEEE Access}, 12:33211--33225, 2024.
+
+\bibitem{chan2024sparse}
+K.~Chan and C.~Yeo.
+\newblock Sparse transformer-based architecture for electricity load
+  forecasting.
+\newblock {\em Applied Energy}, 352:122211, 2024.
+
+\bibitem{zhang2022time}
+Y.~Zhang, Q.~Li, and M.~Chen.
+\newblock Time-augmented transformer for short-term electrical load
+  forecasting.
+\newblock {\em IEEE Transactions on Power Systems}, 37(6):5214--5225, 2022.
+
+\bibitem{lu2024multivariate}
+X.~Lu and Y.~Chen.
+\newblock Multivariate data-slicing transformer neural network for load
+  forecasting in renewable-integrated power systems.
+\newblock {\em Electric Power Systems Research}, 229:110138, 2024.
+
+\bibitem{banik2024stacked}
+S.~Banik and S.~Biswas.
+\newblock A stacked ensemble learning model for renewable power and load
+  forecasting.
+\newblock {\em Energy Reports}, 10:112--123, 2024.
+
+\bibitem{kwon2020electricity}
+S.~Kwon, K.~Lee, and J.~Park.
+\newblock Electricity load forecasting using clustering and dimensionality
+  reduction with advanced neural models.
+\newblock {\em IEEE Transactions on Smart Grid}, 11(5):3980--3992, 2020.
+
+\bibitem{nabavi2024wavelet}
+S.~Nabavi, A.~Koohi, and M.~Rahmani.
+\newblock Wavelet-transform-enhanced lstm for short-term electricity load
+  forecasting.
+\newblock {\em Energy and Buildings}, 293:113350, 2024.
 
 \end{thebibliography}

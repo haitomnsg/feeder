@@ -4,7 +4,7 @@
 \usepackage{ragged2e}
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
-\usepackage{natbib}%referencing
+\usepackage[numbers]{natbib}%referencing
 \usepackage[left=1.0in,right=1.0in,top=.8in,bottom=.8in]{geometry}
 \usepackage{float}
 \linespread{1.3}
@@ -198,13 +198,6 @@ Keywords: \textit{short-term load forecasting, machine learning, XGBoost, Random
 \textbf{TFT}     &  Temporal Fusion Transformer\\
 \textbf{API}     &  Application Programming Interface
 \end{tabular}
-\chapter*{List of units and conversions}
-\addcontentsline{toc}{chapter}{\numberline{}List of Units and conversions}
-\begin{tabular}{l l}
-$m^3$   &   Meter cube (Cubic meter)\\
-Sq.ft   &   Square feet\\
-add     &   more
-\end{tabular}
 \chapter{Introduction}
 \pagenumbering{arabic}%start arabic numbering(1,2,3..) from here
 This project focuses on short-term electrical load forecasting at the feeder level using data-driven machine learning and deep learning techniques. Historical load data combined with weather and temporal features were used to model and predict hourly power demand. Multiple forecasting models were developed and evaluated to identify the most effective approach for accurate and reliable load prediction.
@@ -251,47 +244,47 @@ Despite the promising results obtained in this study, certain limitations were e
 \end{enumerate}
 \chapter{Literature Review}
 The literature review presents a comprehensive overview of existing research related to short-term electrical load forecasting using machine learning and deep learning techniques. It examines previously published studies to understand commonly used methodologies, datasets, and performance evaluation approaches in the domain of power system load forecasting. Reviewing prior work helps to identify current research trends, strengths, and limitations of existing models, while also highlighting gaps that motivate the need for this study. By situating the present research within the context of established knowledge, this chapter provides a foundation for model selection and methodological design adopted in this work.
-\section{Related work}
+\section{Related Work}
 There are many previous works done for electrical load forecasting from short-term electrical load forecasting, to medium-term and long-term. Most of the studies have done short-term load forecasting.
 
 \subsection{Machine Learning Approaches}
-Singla et al. (2019) employed Artificial Neural Networks for 24-hour short-term load forecasting, utilizing dew point temperature, dry bulb temperature, and humidity as input features. Their work demonstrated the effectiveness of ANN in capturing the relationship between weather variables and electrical load demand. Similarly, Desai et al. (2021) utilized the Prophet model from Meta to perform short-term load forecasting, incorporating time, temperature, humidity, and weather forecast data as features. The Prophet model's ability to handle seasonal patterns and missing data made it suitable for load forecasting applications.
+Singla et al. \cite{singla2019electrical} employed Artificial Neural Networks for 24-hour short-term load forecasting, utilizing dew point temperature, dry bulb temperature, and humidity as input features. Their work demonstrated the effectiveness of ANN in capturing the relationship between weather variables and electrical load demand. Similarly, Desai et al. \cite{desai2021electrical} utilized the Prophet model from Meta to perform short-term load forecasting, incorporating time, temperature, humidity, and weather forecast data as features. The Prophet model's ability to handle seasonal patterns and missing data made it suitable for load forecasting applications.
 
-Matrenin et al. (2022) conducted a study on medium-term load forecasting using ensemble machine learning models. They compared XGBoost and AdaBoost against traditional methods including SVR, decision trees, and Random Forest. Their results highlighted the superior performance of gradient boosting techniques for capturing complex load patterns. Aguilar Madrid \& Antonio (2021) tested five machine learning models and found XGBoost to be the most accurate for predictions, using historical load data, weather information, and holiday indicators as input features. Their comprehensive evaluation demonstrated XGBoost's ability to handle diverse feature sets effectively.
+Matrenin et al. \cite{matrenin2022medium} conducted a study on medium-term load forecasting using ensemble machine learning models. They compared XGBoost and AdaBoost against traditional methods including SVR, decision trees, and Random Forest. Their results highlighted the superior performance of gradient boosting techniques for capturing complex load patterns. Aguilar Madrid \& Antonio \cite{aguilar2021short} tested five machine learning models and found XGBoost to be the most accurate for predictions, using historical load data, weather information, and holiday indicators as input features. Their comprehensive evaluation demonstrated XGBoost's ability to handle diverse feature sets effectively.
 
-Guo et al. (2021) analyzed three popular ML methods for load forecasting: Support Vector Machine, Random Forest, and LSTM. They proposed a fusion forecasting approach that combined outputs from all three models, demonstrating that ensemble methods could improve prediction accuracy beyond individual model performance. Saglam et al. (2024) performed a comparison between optimization methods (Particle Swarm Optimization, Dandelion Optimizer, Growth Optimizer) and machine learning models (SVR, ANN) for instantaneous peak electrical load forecasting. They found that ANN combined with Growth Optimizer outperformed other models and identified a strong positive correlation between GDP and peak load demand.
+Guo et al. \cite{guo2021machine} analyzed three popular ML methods for load forecasting: Support Vector Machine, Random Forest, and LSTM. They proposed a fusion forecasting approach that combined outputs from all three models, demonstrating that ensemble methods could improve prediction accuracy beyond individual model performance. Saglam et al. \cite{saglam2024instantaneous} performed a comparison between optimization methods (Particle Swarm Optimization, Dandelion Optimizer, Growth Optimizer) and machine learning models (SVR, ANN) for instantaneous peak electrical load forecasting. They found that ANN combined with Growth Optimizer outperformed other models and identified a strong positive correlation between GDP and peak load demand.
 
-Jain \& Gupta (2024) conducted a comprehensive evaluation of various machine learning algorithms for power load prediction, including Support Vector Machines, LSTM, ensemble classifiers, and Recurrent Neural Networks. Their study emphasized the importance of data preprocessing methods, feature selection strategies, and performance assessment metrics in achieving accurate forecasts. The research demonstrated that ensemble methods and deep learning approaches consistently outperformed traditional statistical models.
+Jain \& Gupta \cite{jain2024comparative} conducted a comprehensive evaluation of various machine learning algorithms for power load prediction, including Support Vector Machines, LSTM, ensemble classifiers, and Recurrent Neural Networks. Their study emphasized the importance of data preprocessing methods, feature selection strategies, and performance assessment metrics in achieving accurate forecasts. The research demonstrated that ensemble methods and deep learning approaches consistently outperformed traditional statistical models.
 
 \subsection{Deep Learning Architectures}
-Chapagain et al. (2021) explored time series regression along with machine learning and deep learning models for electricity demand forecasting in Kathmandu Valley. They found LSTM demonstrating outstanding performance in terms of MAPE and RMSE, using deterministic variables such as day type and temperature. Their work validated the effectiveness of recurrent architectures for capturing temporal dependencies in load data.
+Chapagain et al. \cite{chapagain2021short} explored time series regression along with machine learning and deep learning models for electricity demand forecasting in Kathmandu Valley. They found LSTM demonstrating outstanding performance in terms of MAPE and RMSE, using deterministic variables such as day type and temperature. Their work validated the effectiveness of recurrent architectures for capturing temporal dependencies in load data.
 
-Acharya et al. (n.d.) performed short-term electrical load forecasting for the Gothatar feeder using six input features. They found that Recurrent Neural Networks outperformed baseline methods including Single Exponential Smoothing, Double Exponential Smoothing, and Holt-Winter's method. This study confirmed that RNNs could better model the nonlinear and time-dependent characteristics of feeder-level load patterns.
+Acharya et al. \cite{acharya2021stlf} performed short-term electrical load forecasting for the Gothatar feeder using six input features. They found that Recurrent Neural Networks outperformed baseline methods including Single Exponential Smoothing, Double Exponential Smoothing, and Holt-Winter's method. This study confirmed that RNNs could better model the nonlinear and time-dependent characteristics of feeder-level load patterns.
 
-Cordeiro-Costas et al. (2023) conducted a comprehensive comparison of load forecasting methods, including Random Forest, SVR, XGBoost, Multi-Layer Perceptron, and LSTM. They also explored Conv-1D models and found that LSTM achieved the lowest error rates across multiple evaluation metrics. Their research highlighted the trade-off between model complexity and forecasting accuracy in practical applications.
+Cordeiro-Costas et al. \cite{cordeiro2023load} conducted a comprehensive comparison of load forecasting methods, including Random Forest, SVR, XGBoost, Multi-Layer Perceptron, and LSTM. They also explored Conv-1D models and found that LSTM achieved the lowest error rates across multiple evaluation metrics. Their research highlighted the trade-off between model complexity and forecasting accuracy in practical applications.
 
-Dong et al. (2024) provided a comprehensive survey on deep learning-based short-term electricity load forecasting covering the past decade. They examined the entire forecasting process, including data preprocessing, feature extraction, deep learning modeling and optimization, and results evaluation. The survey identified CNN-LSTM hybrid architectures as widely adopted solutions due to exceptional performance in capturing both spatial and temporal features. Their analysis revealed that most recent studies focused on short-term horizons ranging from one hour to several days ahead.
+Dong et al. \cite{dong2024decade} provided a comprehensive survey on deep learning-based short-term electricity load forecasting covering the past decade. They examined the entire forecasting process, including data preprocessing, feature extraction, deep learning modeling and optimization, and results evaluation. The survey identified CNN-LSTM hybrid architectures as widely adopted solutions due to exceptional performance in capturing both spatial and temporal features. Their analysis revealed that most recent studies focused on short-term horizons ranging from one hour to several days ahead.
 
 \subsection{Hybrid and Advanced Architectures}
-Wen et al. (2024) proposed a hybrid deep learning model combining Gated Recurrent Units and Temporal Convolutional Networks with an attention mechanism for short-term load forecasting. The GRU captured long-term dependencies in time series data, while TCN efficiently learned patterns and features. The attention mechanism automatically focused on input components most relevant to the prediction task, significantly enhancing model performance. Their approach demonstrated superior accuracy compared to standalone architectures.
+Wen et al. \cite{wen2024gru} proposed a hybrid deep learning model combining Gated Recurrent Units and Temporal Convolutional Networks with an attention mechanism for short-term load forecasting. The GRU captured long-term dependencies in time series data, while TCN efficiently learned patterns and features. The attention mechanism automatically focused on input components most relevant to the prediction task, significantly enhancing model performance. Their approach demonstrated superior accuracy compared to standalone architectures.
 
-Alhussein et al. (2020) developed a hybrid CNN-LSTM framework for short-term individual household load forecasting. The model used CNN layers for feature extraction from input data and LSTM layers for sequence learning. Evaluated on the Smart Grid Smart City dataset, the hybrid model achieved an average MAPE of 40.38\%, outperforming standalone LSTM models that obtained 44.06\% MAPE. This work demonstrated the effectiveness of combining convolutional and recurrent architectures for handling high volatility in household-level load data.
+Alhussein et al. \cite{alhussein2020cnn} developed a hybrid CNN-LSTM framework for short-term individual household load forecasting. The model used CNN layers for feature extraction from input data and LSTM layers for sequence learning. Evaluated on the Smart Grid Smart City dataset, the hybrid model achieved an average MAPE of 40.38\%, outperforming standalone LSTM models that obtained 44.06\% MAPE. This work demonstrated the effectiveness of combining convolutional and recurrent architectures for handling high volatility in household-level load data.
 
-Hasanat et al. (2024) proposed a parallel multichannel network approach using 1D CNN and Bidirectional LSTM for load forecasting in smart grids. Unlike traditional stacked CNN-LSTM architectures that use convolutions as preprocessing steps, their model independently processed spatial and temporal characteristics through parallel channels. The research addressed the issue of temporal feature neglect in existing models and incorporated cyclic features through trigonometric transformations, achieving superior accuracy on diverse building types.
+Hasanat et al. \cite{hasanat2024parallel} proposed a parallel multichannel network approach using 1D CNN and Bidirectional LSTM for load forecasting in smart grids. Unlike traditional stacked CNN-LSTM architectures that use convolutions as preprocessing steps, their model independently processed spatial and temporal characteristics through parallel channels. The research addressed the issue of temporal feature neglect in existing models and incorporated cyclic features through trigonometric transformations, achieving superior accuracy on diverse building types.
 
 \subsection{Transformer-Based Models}
-Chan \& Yeo (2024) proposed a sparse transformer-based approach for electricity load forecasting that addressed the computational complexity limitations of standard transformer architectures. Their model applied sparse attention mechanisms to capture temporal dependencies more efficiently, achieving comparable accuracy to RNN-based state-of-the-art methods while being up to 5 times faster during inference. The model was enhanced to support multivariate inputs including weather data, demonstrating versatility in forecasting loads from individual households to city levels.
+Chan \& Yeo \cite{chan2024sparse} proposed a sparse transformer-based approach for electricity load forecasting that addressed the computational complexity limitations of standard transformer architectures. Their model applied sparse attention mechanisms to capture temporal dependencies more efficiently, achieving comparable accuracy to RNN-based state-of-the-art methods while being up to 5 times faster during inference. The model was enhanced to support multivariate inputs including weather data, demonstrating versatility in forecasting loads from individual households to city levels.
 
-Zhang et al. (2022) developed a Time Augmented Transformer model for short-term electrical load forecasting, incorporating temporal features and self-attention mechanisms to capture complex dynamic nonlinear sequence dependencies. Their experimental results showed that multivariate inputs including weather and calendar features produced significantly better predictions than univariate approaches. The attention mechanism's capacity to capture complex dynamical patterns in multivariate data contributed to improved forecasting accuracy.
+Zhang et al. \cite{zhang2022time} developed a Time Augmented Transformer model for short-term electrical load forecasting, incorporating temporal features and self-attention mechanisms to capture complex dynamic nonlinear sequence dependencies. Their experimental results showed that multivariate inputs including weather and calendar features produced significantly better predictions than univariate approaches. The attention mechanism's capacity to capture complex dynamical patterns in multivariate data contributed to improved forecasting accuracy.
 
-Lu \& Chen (2024) proposed a multivariate data slicing transformer neural network for load forecasting in power systems with high-penetration renewables. The transformer model excelled in capturing spatiotemporal relationships by modeling global correlations through self-attention mechanisms. Their approach demonstrated superior performance in handling the intermittency and volatility characteristics brought by renewable energy integration, outperforming traditional statistical models and conventional machine learning methods.
+Lu \& Chen \cite{lu2024multivariate} proposed a multivariate data slicing transformer neural network for load forecasting in power systems with high-penetration renewables. The transformer model excelled in capturing spatiotemporal relationships by modeling global correlations through self-attention mechanisms. Their approach demonstrated superior performance in handling the intermittency and volatility characteristics brought by renewable energy integration, outperforming traditional statistical models and conventional machine learning methods.
 
 \subsection{Comparative Studies and Ensemble Methods}
-Banik \& Biswas (2024) developed an enhanced stacked ensemble model combining Random Forest and XGBoost for renewable power and load forecasting. The Random Forest model first forecasted the target variable, followed by XGBoost improving predictions through combination of RF outputs. A meta-model using logistic regression then learned the optimal combination, achieving 99\% accuracy on R² evaluation metrics for both short-term and long-term predictions in Agartala City dataset.
+Banik \& Biswas \cite{banik2024stacked} developed an enhanced stacked ensemble model combining Random Forest and XGBoost for renewable power and load forecasting. The Random Forest model first forecasted the target variable, followed by XGBoost improving predictions through combination of RF outputs. A meta-model using logistic regression then learned the optimal combination, achieving 99\% accuracy on R² evaluation metrics for both short-term and long-term predictions in Agartala City dataset.
 
-Kwon et al. (2020) conducted extensive research on learning models combined with data clustering and dimensionality reduction for short-term electricity load forecasting. They adapted k-means clustering for data grouping and utilized kernel PCA, UMAP, and t-SNE for dimensionality reduction. Applied to neural network-based models on large-scale electricity usage data from 4,710 households, their approach demonstrated improved forecasting performance through effective data preprocessing and feature engineering.
+Kwon et al. \cite{kwon2020electricity} conducted extensive research on learning models combined with data clustering and dimensionality reduction for short-term electricity load forecasting. They adapted k-means clustering for data grouping and utilized kernel PCA, UMAP, and t-SNE for dimensionality reduction. Applied to neural network-based models on large-scale electricity usage data from 4,710 households, their approach demonstrated improved forecasting performance through effective data preprocessing and feature engineering.
 
-Nabavi et al. (2024) combined Discrete Wavelet Transform with LSTM to improve electricity load forecasting accuracy. The DWT decomposed load series into multiple frequency components, allowing LSTM to learn from denoised and structured representations. Their research demonstrated that preprocessing techniques significantly enhanced deep learning model performance, particularly for datasets with high noise levels and irregular patterns.
+Nabavi et al. \cite{nabavi2024wavelet} combined Discrete Wavelet Transform with LSTM to improve electricity load forecasting accuracy. The DWT decomposed load series into multiple frequency components, allowing LSTM to learn from denoised and structured representations. Their research demonstrated that preprocessing techniques significantly enhanced deep learning model performance, particularly for datasets with high noise levels and irregular patterns.
 \chapter{Methodology}
 This chapter describes the overall research methodology adopted to achieve the objectives of the thesis. It outlines the research design, data acquisition process, preprocessing techniques, and modeling approaches used for short-term electrical load forecasting. The methodology is structured to ensure a systematic analysis, with each step directly linked to the research objectives. A flowchart is used to summarize the overall framework, followed by a detailed explanation of the selected machine learning and deep learning models and the evaluation techniques employed in this study.
 
@@ -1004,10 +997,61 @@ Both LSTM and GRU exhibited high MAE and RMSE values, with RMSE remaining close 
 
 In comparison to machine learning models, deep learning models were clearly outperformed across all evaluation metrics. This highlights that, for the given data scale, feature representation, and forecasting horizon, traditional machine learning models with explicit feature engineering are more suitable than deep learning architectures for feeder-level short-term load forecasting.
 
-\chapter{Conclusions \& Recommendations}
-The conclusion is an integration of various issues covered in the body of the thesis. The conclusion includes noting any implications resulting from the discussion and making policy recommendations and the need for further research. Hence, the conclusion should be a logical ending to what has been previously discussed. It must pull together all parts of the argument and refer the reader back to the focus you have outlined in your introduction and to the central topic. Never present any new information in this section. Thus, the conclusion and recommendation of the study must be limited within the scope of the research.
-\chapter{Limitations and Future enhancement}
-This chapter should contain the major limitations of the project and the further enhancement of the project/research shortly with a different but related approach. \textbf{Referencing checking here}\cite{giri2019transfer}
+\chapter{Conclusion}
+
+\section{Conclusion}
+This thesis developed and evaluated a comprehensive short-term electrical load forecasting framework for the Baneshwor Feeder using machine learning and deep learning approaches. The study followed a systematic methodology involving data acquisition, preprocessing, temporal feature engineering, and comparative evaluation of multiple forecasting models under a unified framework.
+
+Experimental results show that machine learning models, particularly ensemble-based methods, significantly outperform deep learning architectures for the given dataset. Among all evaluated models, the tuned XGBoost model achieved the best performance, with an RMSE of 0.384 MW and an R² value of 0.831, demonstrating its strong capability to model nonlinear and weather-dependent load behavior. Other tree-based models, such as Random Forest and Gradient Boosting, also produced competitive results, further confirming the effectiveness of ensemble learning techniques for feeder-level load forecasting.
+
+In contrast, deep learning models including LSTM, GRU, and MLP did not achieve comparable performance. Their high error values and near-zero R² scores indicate limitations in learning meaningful temporal relationships from the available data, suggesting that deep learning models may require larger datasets or different input structures to be effective in this context.
+
+Overall, this study confirms that accurate feeder-level short-term load forecasting can be achieved through a carefully designed machine learning pipeline. The findings emphasize that model selection should be guided by data characteristics, feature availability, and operational requirements rather than model complexity alone.
+
+\section{Research Limitations}
+Although the study achieved strong forecasting accuracy, several limitations should be acknowledged:
+
+\begin{enumerate}
+    \item \textbf{Limited dataset size:} Deep learning models typically require long historical sequences and larger datasets. After preprocessing and windowing, the amount of usable sequential data became relatively small.
+    
+    \item \textbf{Irregular load behaviour:} Feeder-level load profiles often contain noise, outages, fluctuations, and sudden spikes, which are difficult for DL models to learn without additional contextual variables.
+    
+    \item \textbf{Short sequence window:} The sliding window used for DL models may not fully capture weekly or monthly patterns that influence feeder demand.
+    
+    \item \textbf{Weather data resolution:} Weather data was available at hourly intervals only; finer granularity or additional environmental factors (e.g., wind speed, rainfall intensity) could further improve models.
+    
+    \item \textbf{No real-time deployment environment:} The study focused on model development and evaluation, and did not include live deployment, automation, or integration with NEA's operational systems.
+\end{enumerate}
+These limitations provide important context when interpreting results and designing future enhancements.
+
+\section{Implications}
+The findings of this thesis carry several meaningful implications for utilities, researchers, and system planners:
+
+\begin{enumerate}
+    \item \textbf{Practical adoption for distribution feeders:} Ensemble machine learning models---particularly XGBoost---can provide accurate, low-error forecasts suitable for operational planning, peak management, and scheduling.
+    
+    \item \textbf{Value of feature engineering:} Carefully constructed temporal and weather features significantly improved forecasting accuracy, highlighting the importance of domain knowledge in model design.
+    
+    \item \textbf{Limitations of DL for smaller datasets:} The underperformance of LSTM and GRU models reinforces that deep learning is not always the optimal choice, especially when data is limited, noisy, or discontinuous.
+    
+    \item \textbf{Foundation for advanced decision-making tools:} Forecasts from XGBoost can support demand-side management, smart grid optimization, load shifting strategies, and distributed energy resource planning.
+    
+    \item \textbf{Transferability:} The pipeline developed in this study can be extended to other NEA feeders with minimal modifications, promoting scalable forecasting across the network.
+\end{enumerate}
+
+\section{Future Work}
+Although this study demonstrates effective short-term load forecasting at the feeder level using machine learning models, several extensions can be explored to further enhance forecasting accuracy and practical applicability.
+
+\begin{enumerate}
+    \item \textbf{Incorporation of Additional Influencing Factors:} Future work may include additional exogenous variables such as holiday indicators, special events, and socio-economic factors to better capture demand variations that are not explained by weather and temporal features alone.
+    
+    \item \textbf{Extension to Multi-Feeder and Long-Term Forecasting:} The proposed methodology can be extended to multiple feeders and adapted for medium-term and long-term load forecasting to support broader power system planning and expansion studies.
+    
+    \item \textbf{Improved Deep Learning Architectures and Data Volume:} Deep learning models such as LSTM and GRU may benefit from larger datasets, finer temporal resolution, and advanced architectures---including attention-based or hybrid ML--DL models---to improve their forecasting capability.
+    
+    \item \textbf{Real-Time Deployment and Online Learning:} Future research can focus on deploying the forecasting model in a real-time operational environment, incorporating online or incremental learning techniques to adapt to evolving load patterns.
+\end{enumerate}
+
 \addcontentsline{toc}{section}{References}
 \renewcommand{\bibname}{References}
 \bibliographystyle{unsrt}
