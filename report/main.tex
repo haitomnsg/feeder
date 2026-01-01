@@ -933,10 +933,77 @@ R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y
 
 \textbf{Interpretation:} An R² value of 1 represents perfect prediction, while a value of 0 indicates that the model performs no better than simply using the average load. Higher R² values therefore indicate better model performance. Negative R² values are possible when the model performs worse than the mean baseline.
 
-\chapter{Experimental Setup (if any)}
-In this section, you describe how the experiment was done and summarize how the data was taken. One typically describes the instruments and detectors that were used. Describe the procedure that was followed to collect the data etc.
 \chapter{Results \& Discussion}
-This section should present the findings of the study in logical sequences in line with the specific objectives. The presentation of data and facts should be explained regarding plausibility and compared with data from similar studies. The causal factors behind the findings should be discussed about other variables under consideration in the study based on Focused Group Discussion (FGD), Key Informant Interview (KII), questionnaire survey, modeling, observation, measurement, or literature reviews.
+This chapter presents the performance of all machine learning and deep learning models trained for short-term load forecasting of the Baneshwor Feeder. All models were evaluated using the same performance metrics (MAE, RMSE, MSE, MAPE, R²), ensuring a fair comparison.
+
+\section{Results}
+
+\subsection{Machine Learning Model Performance}
+All machine learning models were trained on the final feature-engineered dataset and evaluated on the test set. Below is the summary table for ML models.
+
+\begin{table}[H]
+\centering
+\caption{Machine Learning Models Evaluation Matrix}
+\label{tab:ml_results}
+\begin{tabular}{|c|l|c|c|c|c|}
+\hline
+\textbf{Rank} & \textbf{Model} & \textbf{MAE} & \textbf{RMSE} & \textbf{MAPE} & \textbf{R²} \\
+\hline
+1 & XGBoost (Tuned) & 0.257 & 0.384 & 12.693 & 0.831 \\
+\hline
+2 & Random Forest (Tuned) & 0.294 & 0.435 & 14.290 & 0.783 \\
+\hline
+3 & Random Forest & 0.305 & 0.444 & 14.825 & 0.774 \\
+\hline
+4 & XGBoost & 0.313 & 0.449 & 15.242 & 0.769 \\
+\hline
+5 & Gradient Boosting & 0.330 & 0.469 & 16.062 & 0.749 \\
+\hline
+6 & SVR & 0.318 & 0.483 & 15.193 & 0.732 \\
+\hline
+7 & Ridge Regression & 0.502 & 0.649 & 25.021 & 0.518 \\
+\hline
+8 & Linear Regression & 0.502 & 0.649 & 25.021 & 0.518 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Discussion of Results}
+The machine learning models were evaluated using MAE, RMSE, MAPE, R-squared (R²), and prediction accuracy to assess their forecasting effectiveness. Linear Regression and Ridge Regression served as baseline models and produced relatively higher error values and lower R² scores, indicating their limited ability to capture nonlinear relationships between load demand and influencing variables. Support Vector Regression improved upon linear models by reducing error metrics; however, its performance remained inferior to ensemble-based approaches, particularly in terms of RMSE and prediction accuracy.
+
+Tree-based ensemble models demonstrated superior performance across all evaluation metrics. Random Forest and Gradient Boosting significantly reduced MAE and RMSE while achieving higher R² values, reflecting improved generalization and better handling of nonlinear patterns. Among these, the tuned XGBoost model outperformed all other machine learning models, achieving the lowest RMSE (0.384 MW), the highest R² (0.831), and the best prediction accuracy (55.77\%). The improvement over other ensemble models can be attributed to XGBoost's gradient-based optimization, regularization mechanisms, and effective handling of feature interactions, which collectively enhanced model robustness and accuracy.
+
+Overall, the comparative evaluation confirms that ensemble-based machine learning models, particularly XGBoost, provide the most reliable and accurate predictions for feeder-level short-term load forecasting.
+
+\subsection{Deep Learning Model Performance}
+Deep learning models were trained using sliding-window sequences to capture temporal dependencies in the feeder load data. Three architectures were implemented: LSTM, GRU, and MLP. After conducting extensive training using the cleaned dataset, the models were evaluated using the same metrics as the ML models.
+
+The results obtained for the deep learning models are presented below.
+
+\begin{table}[H]
+\centering
+\caption{Deep Learning Models Evaluation Matrix}
+\label{tab:dl_results}
+\begin{tabular}{|c|l|c|c|c|c|c|}
+\hline
+\textbf{Rank} & \textbf{Model} & \textbf{MAE} & \textbf{RMSE} & \textbf{MAPE} & \textbf{R²} & \textbf{Accuracy} \\
+\hline
+1 & MLP & 0.618 & 0.499 & 20.062 & 0.011 & 77.890 \\
+\hline
+2 & LSTM & 0.467 & 0.498 & 14.155 & 0.014 & 83.308 \\
+\hline
+3 & GRU & 0.482 & 0.499 & 15.186 & 0.012 & 82.754 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Discussion of Results}
+Deep learning models, including MLP, LSTM, and GRU, were evaluated using the same performance metrics for a fair comparison. Among these models, the MLP produced marginally better results than sequence-based architectures; however, its error values remained high and R² scores were close to zero, indicating weak explanatory power. Sequence-based models such as LSTM and GRU did not show meaningful improvement over MLP, despite their capability to model temporal dependencies.
+
+Both LSTM and GRU exhibited high MAE and RMSE values, with RMSE remaining close to 0.499 MW, and very low prediction accuracy. These results suggest that the deep learning models were unable to effectively learn stable temporal patterns from the available dataset. Compared to machine learning models, deep learning approaches showed limited generalization and higher sensitivity to data volume and structure. The lack of performance gains over simpler architectures indicates that increased model complexity did not translate into improved forecasting accuracy in this case.
+
+In comparison to machine learning models, deep learning models were clearly outperformed across all evaluation metrics. This highlights that, for the given data scale, feature representation, and forecasting horizon, traditional machine learning models with explicit feature engineering are more suitable than deep learning architectures for feeder-level short-term load forecasting.
+
 \chapter{Conclusions \& Recommendations}
 The conclusion is an integration of various issues covered in the body of the thesis. The conclusion includes noting any implications resulting from the discussion and making policy recommendations and the need for further research. Hence, the conclusion should be a logical ending to what has been previously discussed. It must pull together all parts of the argument and refer the reader back to the focus you have outlined in your introduction and to the central topic. Never present any new information in this section. Thus, the conclusion and recommendation of the study must be limited within the scope of the research.
 \chapter{Limitations and Future enhancement}

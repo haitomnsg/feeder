@@ -125,10 +125,13 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcbx1440.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcbx1200.tfm
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
 INPUT main.aux
+INPUT C:\Users\Haitomns\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1200.pk
+INPUT C:\Users\Haitomns\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1200.pk
 INPUT C:\Users\Haitomns\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1440.pk
 INPUT C:\Users\Haitomns\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1440.pk
 INPUT C:\Users\Haitomns\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
