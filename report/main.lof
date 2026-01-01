@@ -4,5 +4,18 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Methodology Block Diagram}}{11}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Feature Correlation Matrix}}{17}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Daily Average Electricity Load Over Time}}{18}{}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Load Distribution by Hour}}{19}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Average Load by Hour of Day}}{20}{}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Average Load by Month}}{21}{}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Air Temperature vs Load}}{22}{}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Load vs Humidity}}{22}{}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Solar Radiation vs Load}}{23}{}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Architecture MLP}}{29}{}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Architecture LSTM}}{30}{}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Architecture GRU}}{32}{}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces XBoost (Tuned) Actual vs Predicted}}{40}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces LSTM Actual vs Predicted}}{42}{}%
 \addvspace {10\p@ }

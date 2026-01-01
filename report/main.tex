@@ -404,6 +404,13 @@ Before modeling, a correlation heatmap was created to examine the relationships 
 
 A correlation matrix was computed using all numerical features in the dataset. The analysis showed that Hour had the strongest correlation with POWER (MW) at +0.457, while global solar radiation contributed a moderate positive correlation of +0.307. Temperature and humidity exhibited weaker correlations, ranging from about +0.18 to --0.18, and calendar-related features such as Month, IsWeekend, and DayOfWeek displayed weak but meaningful trends. Overall, the correlation analysis supported the decision to retain both weather variables and time-based features in the modeling process.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{featureCorrelation.png}
+    \caption{Feature Correlation Matrix}
+    \label{fig:feature_correlation}
+\end{figure}
+
 \subsection{Train--Test Split}
 Since machine learning models depend on random data splits, while deep learning models typically require sequential splits, the dataset was divided into 80 percent for training and 20 percent for testing. Shuffling was enabled for the ML models to prevent seasonal clustering from introducing bias during training.
 
@@ -419,17 +426,66 @@ The final dataset consisted of hourly timestamps spanning the entire study perio
 \subsection{Time-Series Visualization}
 To understand how the load varies over time, the hourly POWER (MW) values were resampled into daily averages and visualized across the entire study period. The resulting trend showed clear daily, weekly, and seasonal fluctuations in the feeder's behavior. Winter months displayed slightly lower solar radiation levels along with moderately higher load during certain intervals. Occasional dips in the curve aligned with known outages or special events. Solar radiation exhibited a strong daytime pattern, reinforcing its moderate correlation with load. Overall, this broad visualization confirmed that the Baneshwor Feeder operates as a typical mixed-load distribution feeder with pronounced daily cycles and noticeable seasonal influences.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{lineGraphLoad.png}
+    \caption{Daily Average Electricity Load Over Time}
+    \label{fig:line_graph_load}
+\end{figure}
+
 \subsection{Hourly Load Pattern Analysis}
 The hourly load values were averaged across the full dataset to understand the feeder's daily consumption pattern. The analysis showed that the minimum load typically occurs around 3:00 AM, which reflects low residential and commercial activity during that time. Load levels begin to rise through the morning and reach a peak at around 19:00, with the average peak load reaching approximately 3.16 POWER (MW). This aligns with evening lighting needs and heightened residential usage. A boxplot comparing load against hour of day further illustrated that evening hours exhibit higher variance, while midnight to early-morning hours display more stable and lower demand. These observations confirm that the hour of the day is one of the strongest predictors of load in this feeder.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{hourlyLoad.png}
+    \caption{Load Distribution by Hour}
+    \label{fig:hourly_load}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{loadByHour.png}
+    \caption{Average Load by Hour of Day}
+    \label{fig:load_by_hour}
+\end{figure}
+
 \subsection{Monthly Load Trends}
 Monthly averages revealed that warmer months experience higher temperatures, although the corresponding load behavior varies across the year. Seasonal patterns are present but not as dominant as the daily cycles observed in the feeder. Consumption typically increases during festival seasons when household activity rises. These seasonal shifts are effectively captured through the Month feature and its corresponding Month\_sin and Month\_cos cyclical encodings.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{averageload.png}
+    \caption{Average Load by Month}
+    \label{fig:average_load_month}
+\end{figure}
 
 \subsection{Weather Variable Behaviour}
 All weather variables were examined individually to understand their behavior and potential influence on load. Air temperature ranged from roughly 1°C to 33°C and followed a clear daily cycle, with warmer afternoons and cooler nights. Global solar radiation showed a distinct daytime-only pattern, peaking sharply around midday and dropping to zero during nighttime hours. Relative humidity tended to be higher during nighttime and rainy months and displayed a slight inverse relationship with temperature.
 
 \subsection{Load vs. Weather Relationships}
 Scatter plots were used to examine how load responds to different weather variables. The temperature--load relationship showed a weak positive correlation, with load increasing moderately as temperatures rise, which is typical for mixed-load areas where fans and cooling appliances see greater use. Solar radiation displayed a moderate positive correlation with load, as higher midday radiation often coincides with active residential and commercial activity. Humidity exhibited a weak negative correlation, since high humidity is generally associated with cloudy or rainy conditions during which daytime load may decrease slightly.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{tempLoad.png}
+    \caption{Air Temperature vs Load}
+    \label{fig:temp_load}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{humandityLoad.png}
+    \caption{Load vs Humidity}
+    \label{fig:humidity_load}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{solarLoad.png}
+    \caption{Solar Radiation vs Load}
+    \label{fig:solar_load}
+\end{figure}
 
 \subsection{Correlation Analysis}
 A correlation matrix was computed using all numerical features in the dataset. The analysis showed that Hour had the strongest correlation with POWER (MW) at +0.457, while global solar radiation contributed a moderate positive correlation of +0.307. Temperature and humidity exhibited weaker correlations, ranging from about +0.18 to --0.18, and calendar-related features such as Month, IsWeekend, and DayOfWeek displayed weak but meaningful trends. Overall, the correlation analysis supported the decision to retain both weather variables and time-based features in the modeling process.
@@ -648,6 +704,13 @@ Output layer:
 \end{itemize}
 \end{quote}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{mlp.png}
+    \caption{Architecture MLP}
+    \label{fig:mlp_architecture}
+\end{figure}
+
 \subsubsection{Long Short-Term Memory (LSTM)}
 LSTM networks are designed to maintain contextual memory over long sequences through a gating mechanism that controls information flow. This makes them naturally suited for load forecasting, where consumption patterns depend on previous hours. The LSTM architecture addresses the vanishing gradient problem that affects standard RNNs.
 
@@ -698,6 +761,13 @@ h_t = o_t \odot \tanh(c_t)
 \end{itemize}
 \end{quote}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{lstm.png}
+    \caption{Architecture LSTM}
+    \label{fig:lstm_architecture}
+\end{figure}
+
 \subsubsection{Gated Recurrent Unit (GRU)}
 GRU is a streamlined version of LSTM with fewer parameters, combining the forget and input gates into a single update gate and merging the cell state with the hidden state. It often trains faster while achieving comparable performance to LSTM.
 
@@ -737,6 +807,13 @@ h_t = (1 - z_t) \odot h_{t-1} + z_t \odot \tilde{h}_t
     \item $r_t$ controls how much of the previous state influences the candidate
 \end{itemize}
 \end{quote}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{gru.png}
+    \caption{Architecture GRU}
+    \label{fig:gru_architecture}
+\end{figure}
 
 \section{Model Training and Validation}
 This stage focuses on how both machine learning (ML) and deep learning (DL) models were trained, tuned, validated, and prepared for final performance comparison. Since ML and DL models require different handling, the training process is presented in two separate parts.
@@ -991,6 +1068,13 @@ Tree-based ensemble models demonstrated superior performance across all evaluati
 
 Overall, the comparative evaluation confirms that ensemble-based machine learning models, particularly XGBoost, provide the most reliable and accurate predictions for feeder-level short-term load forecasting.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{xboostActual.png}
+    \caption{XBoost (Tuned) Actual vs Predicted}
+    \label{fig:xboost_actual}
+\end{figure}
+
 \subsection{Deep Learning Model Performance}
 Deep learning models were trained using sliding-window sequences to capture temporal dependencies in the feeder load data. Three architectures were implemented: LSTM, GRU, and MLP. After conducting extensive training using the cleaned dataset, the models were evaluated using the same metrics as the ML models.
 
@@ -1019,6 +1103,13 @@ Deep learning models, including MLP, LSTM, and GRU, were evaluated using the sam
 Both LSTM and GRU exhibited high MAE and RMSE values, with RMSE remaining close to 0.499 MW, and very low prediction accuracy. These results suggest that the deep learning models were unable to effectively learn stable temporal patterns from the available dataset. Compared to machine learning models, deep learning approaches showed limited generalization and higher sensitivity to data volume and structure. The lack of performance gains over simpler architectures indicates that increased model complexity did not translate into improved forecasting accuracy in this case.
 
 In comparison to machine learning models, deep learning models were clearly outperformed across all evaluation metrics. This highlights that, for the given data scale, feature representation, and forecasting horizon, traditional machine learning models with explicit feature engineering are more suitable than deep learning architectures for feeder-level short-term load forecasting.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{lstmActual.png}
+    \caption{LSTM Actual vs Predicted}
+    \label{fig:lstm_actual}
+\end{figure}
 
 \chapter{Conclusion}
 
