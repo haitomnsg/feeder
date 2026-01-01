@@ -362,6 +362,62 @@ The process involved parsing all load timestamps, including proper handling of `
 \end{enumerate}
 
 This dataset is the core input for all ML/DL models used in the thesis.
+
+\section{Data Preprocessing}
+Once the load and weather datasets were fully acquired and merged into a single hourly dataset, several preprocessing steps were applied to prepare the data for machine learning and deep learning models. These steps ensure data consistency, remove inconsistencies introduced during manual logging, and improve the overall reliability of the models.
+
+\subsection{Timestamp Parsing and Standardization}
+The merged dataset initially contained timestamps in multiple formats, such as ``YYYY-MM-DD HH:MM,'' ``YYYY-MM-DD HH:MM:SS,'' and special cases like ``24:00.'' To prevent errors during model training, the Time column was fully standardized. All timestamps were parsed using a custom parser capable of handling ``24:00'' by shifting it to 00:00 of the following day, and the final format was normalized to ``YYYY-MM-DD HH:00.'' This ensured that every row represented a clean and unambiguous hourly reading.
+
+\subsection{Handling Missing Values}
+During the data acquisition process, several power (MW) entries were found to be missing due to incomplete feeder log sheets, damaged or empty records, and files containing no valid measurements. Since the dataset represents time-series load data, preserving temporal continuity was a key consideration during preprocessing.
+
+To address this issue, a forward-fill followed by backward-fill imputation strategy was employed. In the forward-fill step, missing values were replaced using the most recent valid observation, ensuring continuity with past load behavior. Subsequently, any remaining missing values, typically occurring at the beginning of the dataset, were filled using the next available valid observation through backward filling. This combined approach effectively maintains the temporal structure of the load data while avoiding the introduction of artificial fluctuations or unrealistic load variations.
+
+\subsection{Outlier Detection and Treatment}
+Some load values contained extreme spikes caused by Excel merging errors, mistyped POWER (MW) entries, or abnormally large or zero readings recorded during festivals or outages. Outlier detection was performed using the Interquartile Range (IQR) method, where Q1, Q3, and the IQR were computed, and any values falling below $Q1 - 1.5 \times IQR$ or above $Q3 + 1.5 \times IQR$ were flagged as outliers. Although approximately 0.24 percent of the data was identified as anomalous, these points were not removed, as discarding them would break the continuity of the time-series structure.
+
+\subsection{Weather Data Cleaning and Alignment}
+After merging the weather data with the load dataset, any NaN weather values were filled using linear interpolation. Extreme or zero readings for humidity and temperature were smoothed using nearest-neighbor values, while missing solar radiation entries were replaced with zero under the assumption of nighttime conditions. All weather variables were then aligned precisely to the hourly timestamps. This produced a fully synchronized dataset in which every hour contained both load and weather information.
+
+\subsection{Temporal Feature Engineering}
+To help ML/DL models learn daily/weekly seasonal patterns, several time-based features were added. The timestamp was used to extract several temporal features, including Hour (0--23), Day (1--31), Month (1--12), DayOfWeek (0--6), WeekOfYear, and an IsWeekend flag. These features were designed to capture the natural daily and weekly patterns present in electricity consumption. Since time progresses cyclically---where hour 23 transitions directly back to hour 0---cyclical encodings were also applied. Sine and cosine transformations were created for the hour values, such as $Hour\_sin = \sin(2\pi \times Hour / 24)$ and $Hour\_cos = \cos(2\pi \times Hour / 24)$, and similar cyclic encodings were generated for Month and DayOfWeek. These transformations help machine learning and deep learning models learn smooth periodic relationships instead of treating time variables as abrupt linear steps.
+
+\subsection{Correlation Analysis and Feature Selection}
+Before modeling, a correlation heatmap was created to examine the relationships among variables. Hour showed the strongest correlation with load, while global solar radiation exhibited a moderate positive correlation. Temperature demonstrated a weak but meaningful correlation, and humidity showed a weak negative correlation. All features were retained based on their correlation patterns and domain relevance. The final feature set consisted of fourteen engineered features that combined both temporal components and weather variables.
+
+A correlation matrix was computed using all numerical features in the dataset. The analysis showed that Hour had the strongest correlation with POWER (MW) at +0.457, while global solar radiation contributed a moderate positive correlation of +0.307. Temperature and humidity exhibited weaker correlations, ranging from about +0.18 to --0.18, and calendar-related features such as Month, IsWeekend, and DayOfWeek displayed weak but meaningful trends. Overall, the correlation analysis supported the decision to retain both weather variables and time-based features in the modeling process.
+
+\subsection{Train--Test Split}
+Since machine learning models depend on random data splits, while deep learning models typically require sequential splits, the dataset was divided into 80 percent for training and 20 percent for testing. Shuffling was enabled for the ML models to prevent seasonal clustering from introducing bias during training.
+
+\subsection{Final Processed Dataset Structure}
+After all preprocessing steps were completed, each row of the dataset contained the timestamp, POWER (MW) load value, air temperature, global solar radiation, relative humidity, and fourteen engineered temporal features. The dataset had no missing values, no irregular timestamps, and no half-hour entries, resulting in a fully cleaned, capped, and time-aligned series. This final consolidated dataset was then used for developing the machine learning and deep learning models.
+
+\section{Exploratory Data Analysis (EDA)}
+Exploratory Data Analysis was carried out to understand the statistical behaviour of the load and weather variables, identify underlying temporal patterns, and observe the relationships between different features. This step provides important insights that guide model selection, feature engineering, and the choice of evaluation methods.
+
+\subsection{Overview of the Dataset}
+The final dataset consisted of hourly timestamps spanning the entire study period, feeder load values in megawatts, and the key weather variables of air temperature, global solar radiation, and relative humidity. It also included a comprehensive set of engineered temporal features such as hour, day, month, weekday, and the corresponding cyclical encodings. A quick inspection confirmed that there were no missing values after imputation, the dataset maintained a uniform hourly structure with no half-hour gaps, the POWER (MW) readings were clean after capping and smoothing, and all weather and load timestamps were fully synchronized.
+
+\subsection{Time-Series Visualization}
+To understand how the load varies over time, the hourly POWER (MW) values were resampled into daily averages and visualized across the entire study period. The resulting trend showed clear daily, weekly, and seasonal fluctuations in the feeder's behavior. Winter months displayed slightly lower solar radiation levels along with moderately higher load during certain intervals. Occasional dips in the curve aligned with known outages or special events. Solar radiation exhibited a strong daytime pattern, reinforcing its moderate correlation with load. Overall, this broad visualization confirmed that the Baneshwor Feeder operates as a typical mixed-load distribution feeder with pronounced daily cycles and noticeable seasonal influences.
+
+\subsection{Hourly Load Pattern Analysis}
+The hourly load values were averaged across the full dataset to understand the feeder's daily consumption pattern. The analysis showed that the minimum load typically occurs around 3:00 AM, which reflects low residential and commercial activity during that time. Load levels begin to rise through the morning and reach a peak at around 19:00, with the average peak load reaching approximately 3.16 POWER (MW). This aligns with evening lighting needs and heightened residential usage. A boxplot comparing load against hour of day further illustrated that evening hours exhibit higher variance, while midnight to early-morning hours display more stable and lower demand. These observations confirm that the hour of the day is one of the strongest predictors of load in this feeder.
+
+\subsection{Monthly Load Trends}
+Monthly averages revealed that warmer months experience higher temperatures, although the corresponding load behavior varies across the year. Seasonal patterns are present but not as dominant as the daily cycles observed in the feeder. Consumption typically increases during festival seasons when household activity rises. These seasonal shifts are effectively captured through the Month feature and its corresponding Month\_sin and Month\_cos cyclical encodings.
+
+\subsection{Weather Variable Behaviour}
+All weather variables were examined individually to understand their behavior and potential influence on load. Air temperature ranged from roughly 1°C to 33°C and followed a clear daily cycle, with warmer afternoons and cooler nights. Global solar radiation showed a distinct daytime-only pattern, peaking sharply around midday and dropping to zero during nighttime hours. Relative humidity tended to be higher during nighttime and rainy months and displayed a slight inverse relationship with temperature.
+
+\subsection{Load vs. Weather Relationships}
+Scatter plots were used to examine how load responds to different weather variables. The temperature--load relationship showed a weak positive correlation, with load increasing moderately as temperatures rise, which is typical for mixed-load areas where fans and cooling appliances see greater use. Solar radiation displayed a moderate positive correlation with load, as higher midday radiation often coincides with active residential and commercial activity. Humidity exhibited a weak negative correlation, since high humidity is generally associated with cloudy or rainy conditions during which daytime load may decrease slightly.
+
+\subsection{Correlation Analysis}
+A correlation matrix was computed using all numerical features in the dataset. The analysis showed that Hour had the strongest correlation with POWER (MW) at +0.457, while global solar radiation contributed a moderate positive correlation of +0.307. Temperature and humidity exhibited weaker correlations, ranging from about +0.18 to --0.18, and calendar-related features such as Month, IsWeekend, and DayOfWeek displayed weak but meaningful trends. Overall, the correlation analysis supported the decision to retain both weather variables and time-based features in the modeling process.
+
 \chapter{Experimental Setup (if any)}
 In this section, you describe how the experiment was done and summarize how the data was taken. One typically describes the instruments and detectors that were used. Describe the procedure that was followed to collect the data etc.
 \chapter{Results \& Discussion}

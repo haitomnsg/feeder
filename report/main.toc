@@ -29,9 +29,26 @@
 \contentsline {subsection}{\numberline {3.2.2}Load Data Acquisition and Structuring Process}{11}{}%
 \contentsline {subsection}{\numberline {3.2.3}Weather Data Acquisition and Structuring}{12}{}%
 \contentsline {subsection}{\numberline {3.2.4}Final Merging of Load and Weather Data}{12}{}%
-\contentsline {chapter}{\numberline {4}Experimental Setup (if any)}{14}{}%
-\contentsline {chapter}{\numberline {5}Results \& Discussion}{15}{}%
-\contentsline {chapter}{\numberline {6}Conclusions \& Recommendations}{16}{}%
-\contentsline {chapter}{\numberline {7}Limitations and Future enhancement}{17}{}%
-\contentsline {section}{References}{17}{}%
-\contentsline {section}{APPENDICES}{19}{}%
+\contentsline {section}{\numberline {3.3}Data Preprocessing}{13}{}%
+\contentsline {subsection}{\numberline {3.3.1}Timestamp Parsing and Standardization}{13}{}%
+\contentsline {subsection}{\numberline {3.3.2}Handling Missing Values}{13}{}%
+\contentsline {subsection}{\numberline {3.3.3}Outlier Detection and Treatment}{14}{}%
+\contentsline {subsection}{\numberline {3.3.4}Weather Data Cleaning and Alignment}{14}{}%
+\contentsline {subsection}{\numberline {3.3.5}Temporal Feature Engineering}{14}{}%
+\contentsline {subsection}{\numberline {3.3.6}Correlation Analysis and Feature Selection}{14}{}%
+\contentsline {subsection}{\numberline {3.3.7}Train--Test Split}{15}{}%
+\contentsline {subsection}{\numberline {3.3.8}Final Processed Dataset Structure}{15}{}%
+\contentsline {section}{\numberline {3.4}Exploratory Data Analysis (EDA)}{15}{}%
+\contentsline {subsection}{\numberline {3.4.1}Overview of the Dataset}{15}{}%
+\contentsline {subsection}{\numberline {3.4.2}Time-Series Visualization}{16}{}%
+\contentsline {subsection}{\numberline {3.4.3}Hourly Load Pattern Analysis}{16}{}%
+\contentsline {subsection}{\numberline {3.4.4}Monthly Load Trends}{16}{}%
+\contentsline {subsection}{\numberline {3.4.5}Weather Variable Behaviour}{16}{}%
+\contentsline {subsection}{\numberline {3.4.6}Load vs. Weather Relationships}{17}{}%
+\contentsline {subsection}{\numberline {3.4.7}Correlation Analysis}{17}{}%
+\contentsline {chapter}{\numberline {4}Experimental Setup (if any)}{18}{}%
+\contentsline {chapter}{\numberline {5}Results \& Discussion}{19}{}%
+\contentsline {chapter}{\numberline {6}Conclusions \& Recommendations}{20}{}%
+\contentsline {chapter}{\numberline {7}Limitations and Future enhancement}{21}{}%
+\contentsline {section}{References}{21}{}%
+\contentsline {section}{APPENDICES}{23}{}%

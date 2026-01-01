@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.1)  1 JAN 2026 21:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.1)  1 JAN 2026 21:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -364,30 +364,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--166
  3.
 [9
 
-] [10] [11] [12] [13]
+] [10] [11] [12]
+Overfull \hbox (2.51233pt too wide) in paragraph at lines 378--379
+\OT1/cmr/m/n/12 Some load val-ues con-tained ex-treme spikes caused by Ex-cel merg-ing er-rors, mistyped POWER
+ []
+
+[13] [14] [15] [16] [17]
  4.
-[14
+[18
 
 ]
  5.
-[15
+[19
 
 ]
  6.
-[16
+[20
 
 ]
  7.
 
-Overfull \hbox (18.5726pt too wide) in paragraph at lines 371--371
+Overfull \hbox (18.5726pt too wide) in paragraph at lines 427--427
  |[]\OT1/cmr/bx/n/24.88 Limitations and Fu-ture en-hance-ment| 
  []
 
-(main.bbl [17
+(main.bbl [21
 
-]) [18
+]) [22
 
-] [19
+] [23
 
 ] (main.aux)
  ***********
@@ -396,17 +401,17 @@ L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4121 strings out of 467871
- 60341 string characters out of 5428435
- 488644 words of memory out of 5000000
- 32955 multiletter control sequences out of 15000+600000
+ 4123 strings out of 467871
+ 60373 string characters out of 5428435
+ 491644 words of memory out of 5000000
+ 32957 multiletter control sequences out of 15000+600000
  635613 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,10n,65p,988b,231s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Haitomns\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (33 pages, 161086 bytes).
+ <C:\Users\Haitomns\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (37 pages, 187226 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
