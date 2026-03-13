@@ -221,6 +221,34 @@
       \field{pages}{5\bibrangedash 32}
       \range{pages}{28}
     \endentry
+    \entry{bunn2004modelling}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d5fbb37de7d67a3359d73083b51fc2f8}{%
+           family={Bunn},
+           familyi={B\bibinitperiod},
+           given={Derek\bibnamedelima W},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{fullhash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{fullhashraw}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{bibnamehash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{authorbibnamehash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{authornamehash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{authorfullhash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{authorfullhashraw}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{John Wiley \& Sons}
+      \field{title}{Modelling Prices in Competitive Electricity Markets}
+      \field{year}{2004}
+    \endentry
     \entry{chan2024sparse}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=bb62ccab7499ec096dbc3157e410601a}{%
@@ -1848,6 +1876,34 @@
       \field{year}{2001}
       \field{pages}{5\bibrangedash 32}
       \range{pages}{28}
+    \endentry
+    \entry{bunn2004modelling}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d5fbb37de7d67a3359d73083b51fc2f8}{%
+           family={Bunn},
+           familyi={B\bibinitperiod},
+           given={Derek\bibnamedelima W},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{fullhash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{fullhashraw}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{bibnamehash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{authorbibnamehash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{authornamehash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{authorfullhash}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \strng{authorfullhashraw}{d5fbb37de7d67a3359d73083b51fc2f8}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{John Wiley \& Sons}
+      \field{title}{Modelling Prices in Competitive Electricity Markets}
+      \field{year}{2004}
     \endentry
     \entry{chan2024sparse}{article}{}{}
       \name{author}{2}{}{%

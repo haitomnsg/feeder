@@ -1,14 +1,17 @@
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Substation \& Transmission Line Network Baneshwor}}{2}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Architecture LSTM}}{16}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Architecture GRU}}{17}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Methodology Block Diagram}}{19}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Feature Correlation Matrix}}{25}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Daily Average Electricity Load Over Time}}{36}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Load Distribution by Hour}}{37}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Average Load by Month}}{38}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Air Temperature Variation Over the Study Period}}{39}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Global Solar Radiation Variation Over the Study Period}}{39}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Relative Humidity Variation Over the Study Period}}{40}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Boxplot of MW Column Before and After Outlier Removal}}{41}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces XBoost (Tuned) Actual vs Predicted}}{44}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces GRU Model Actual vs Predicted Values (Last 200 Test Points)}}{47}{figure.caption.32}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Substation \& Transmission Line Network Baneshwor}}{3}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Architecture LSTM}}{19}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Architecture GRU}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Methodology Block Diagram}}{24}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Feature Correlation Matrix}}{29}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Daily Average Electricity Load Over Time}}{40}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Load Distribution by Hour}}{41}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Average Load by Month}}{42}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Air Temperature Variation Over the Study Period}}{43}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Global Solar Radiation Variation Over the Study Period}}{43}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Relative Humidity Variation Over the Study Period}}{44}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Boxplot of MW Column Before and After Outlier Removal}}{45}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Relative Humidity -- Outlier Removal Comparison}}{46}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Air Temperature -- Outlier Removal Comparison}}{46}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Global Solar Radiation -- Outlier Removal Comparison}}{46}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces XBoost (Tuned) Actual vs Predicted}}{50}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces GRU Model Actual vs Predicted Values (Last 200 Test Points)}}{53}{figure.caption.35}%

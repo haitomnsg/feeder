@@ -252,6 +252,7 @@ INPUT .\Figures\lineDiagram.png
 INPUT .\Figures\lineDiagram.png
 INPUT .\Figures\lineDiagram.png
 INPUT .\Figures\lineDiagram.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT .\Figures\lstm.png
 INPUT .\Figures\lstm.png
 INPUT .\Figures\lstm.png
@@ -281,7 +282,6 @@ INPUT .\Figures\featureCorrelation.png
 INPUT .\Figures\featureCorrelation.png
 INPUT .\Figures\featureCorrelation.png
 INPUT .\Figures\featureCorrelation.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
 INPUT .\Figures\lineGraphLoad.png
 INPUT .\Figures\lineGraphLoad.png
@@ -332,6 +332,27 @@ INPUT .\Figures\boxplot_comparison_before_after.png
 INPUT .\Figures\boxplot_comparison_before_after.png
 INPUT .\Figures\boxplot_comparison_before_after.png
 INPUT .\Figures\boxplot_comparison_before_after.png
+INPUT .\Figures\relativeHumidity.png
+INPUT .\Figures\relativeHumidity.png
+INPUT .\Figures\relativeHumidity.png
+INPUT .\Figures\relativeHumidity.png
+INPUT .\Figures\relativeHumidity.png
+INPUT .\Figures\relativeHumidity.png
+INPUT .\Figures\relativeHumidity.png
+INPUT .\Figures\airTemperature.png
+INPUT .\Figures\airTemperature.png
+INPUT .\Figures\airTemperature.png
+INPUT .\Figures\airTemperature.png
+INPUT .\Figures\airTemperature.png
+INPUT .\Figures\airTemperature.png
+INPUT .\Figures\airTemperature.png
+INPUT .\Figures\globalSolar.png
+INPUT .\Figures\globalSolar.png
+INPUT .\Figures\globalSolar.png
+INPUT .\Figures\globalSolar.png
+INPUT .\Figures\globalSolar.png
+INPUT .\Figures\globalSolar.png
+INPUT .\Figures\globalSolar.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcbx1200.tfm
 INPUT .\Figures\xboostActual.png
 INPUT .\Figures\xboostActual.png

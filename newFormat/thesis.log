@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.1)  16 JAN 2026 07:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.1)  17 JAN 2026 21:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -757,7 +757,7 @@ Package biblatex Info: ... file 'thesis.bbl' found.
  (thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 215.
 Package biblatex Info: Reference segment=0 on input line 215.
-<tu_logo.png, id=199, 294.09875pt x 343.2825pt>
+<tu_logo.png, id=215, 294.09875pt x 343.2825pt>
 File: tu_logo.png Graphic file (type png)
 <use tu_logo.png>
 Package pdftex.def Info: tu_logo.png  used on input line 306.
@@ -815,197 +815,219 @@ Package geometry Warning: Over-specification in `v'-direction.
 
 ] [3
 
-] [4] (thesis.toc [5
+] [4] [5] (thesis.toc [6
 
 ])
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- [6] (thesis.lot)
+ [7] (thesis.lot)
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
- [7
+ [8
 
 ] (thesis.lof)
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [8
+ [9
 
-] [9
+] [10
 
 
-] [10]
+] [11]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.628 T
-       he Baneshwor Feeder of the Nepal Electricity Authority serves a mixed... [1
+l.623 
+       [1
 
 
 ]
-<Figures/lineDiagram.png, id=354, 523.35526pt x 511.31026pt>
+<Figures/lineDiagram.png, id=391, 523.35526pt x 511.31026pt>
 File: Figures/lineDiagram.png Graphic file (type png)
 <use Figures/lineDiagram.png>
-Package pdftex.def Info: Figures/lineDiagram.png  used on input line 637.
+Package pdftex.def Info: Figures/lineDiagram.png  used on input line 640.
 (pdftex.def)             Requested size: 375.14705pt x 366.51248pt.
- [2 <./Figures/lineDiagram.png>] [3] [4] [5] [6] [7
 
-] [8] [9]
-Overfull \hbox (3.96506pt too wide) in paragraph at lines 769--770
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2] [3 <./Figures/lineDiagram.png>] [4] [5] [6] [7] [8
+
+] [9] [10] [11] [12]
+Overfull \hbox (3.96506pt too wide) in paragraph at lines 815--816
 \OT1/cmr/m/n/12 un-der-ly-ing the com-pu-ta-tional mod-els de-ployed through-out this in-ves-ti-ga-tion. Com-
  []
 
-[10] [11] [12] [13] [14]
-<Figures/lstm.png, id=489, 289.83281pt x 260.47313pt>
+[13] [14] [15] [16] [17] [18]
+<Figures/lstm.png, id=567, 289.83281pt x 260.47313pt>
 File: Figures/lstm.png Graphic file (type png)
 <use Figures/lstm.png>
-Package pdftex.def Info: Figures/lstm.png  used on input line 896.
+Package pdftex.def Info: Figures/lstm.png  used on input line 942.
 (pdftex.def)             Requested size: 291.78174pt x 262.24113pt.
- [15] [16 <./Figures/lstm.png>]
-<Figures/gru.png, id=508, 290.58563pt x 260.47313pt>
+ [19 <./Figures/lstm.png>]
+<Figures/gru.png, id=578, 290.58563pt x 260.47313pt>
 File: Figures/gru.png Graphic file (type png)
 <use Figures/gru.png>
-Package pdftex.def Info: Figures/gru.png  used on input line 932.
+Package pdftex.def Info: Figures/gru.png  used on input line 978.
 (pdftex.def)             Requested size: 291.78174pt x 261.5615pt.
- [17 <./Figures/gru.png>] [18
+ [20] [21 <./Figures/gru.png>] [22
 
 ]
-<Figures/blockDiagram.png, id=521, 1413.28pt x 770.88pt>
+<Figures/blockDiagram.png, id=599, 1413.28pt x 770.88pt>
 File: Figures/blockDiagram.png Graphic file (type png)
 <use Figures/blockDiagram.png>
-Package pdftex.def Info: Figures/blockDiagram.png  used on input line 961.
+Package pdftex.def Info: Figures/blockDiagram.png  used on input line 1007.
 (pdftex.def)             Requested size: 375.14705pt x 204.62334pt.
-
-Overfull \hbox (6.94604pt too wide) in paragraph at lines 968--969
+ [23]
+Overfull \hbox (6.94604pt too wide) in paragraph at lines 1014--1015
 \OT1/cmr/m/n/12 per-a-ture, at-mo-spheric mois-ture con-tent, and pre-cip-i-ta-tion measurements---originate
  []
 
-[19 <./Figures/blockDiagram.png>] [20] [21] [22]
-Overfull \hbox (1.5474pt too wide) in paragraph at lines 1005--1006
+[24 <./Figures/blockDiagram.png>] [25] [26]
+Overfull \hbox (1.5474pt too wide) in paragraph at lines 1051--1052
 []\OT1/cmr/bx/n/12 Structuring Weather Times-tamp Align-ment: \OT1/cmr/m/n/12 Times-tamps were shifted
  []
 
-[23]
-<Figures/featureCorrelation.png, id=548, 625.1355pt x 549.9747pt>
+[27] [28]
+<Figures/featureCorrelation.png, id=630, 625.1355pt x 549.9747pt>
 File: Figures/featureCorrelation.png Graphic file (type png)
 <use Figures/featureCorrelation.png>
-Package pdftex.def Info: Figures/featureCorrelation.png  used on input line 1022.
+Package pdftex.def Info: Figures/featureCorrelation.png  used on input line 1068.
 (pdftex.def)             Requested size: 291.78174pt x 256.70067pt.
- [24] [25 <./Figures/featureCorrelation.png>] [26] [27] [28] [29]
-Overfull \hbox (14.40984pt too wide) in paragraph at lines 1170--1171
+ [29 <./Figures/featureCorrelation.png>] [30] [31] [32] [33] [34]
+Overfull \hbox (14.40984pt too wide) in paragraph at lines 1216--1217
 []\OT1/cmr/bx/n/12 LSTM: \OT1/cmr/m/n/12 Pro-cessed se-quen-tial in-puts with a 24-hour look-back win-dow. Achieved
  []
 
-[30] [31] [32]
+[35] [36] [37]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 1240.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1240.
+(hyperref)                removing `\mathsurround' on input line 1286.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1240.
+(hyperref)                removing `\z@' on input line 1286.
 
-[33] [34]
-Overfull \hbox (12.62515pt too wide) in paragraph at lines 1272--1273
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 1286.
+
+[38]
+Overfull \hbox (12.62515pt too wide) in paragraph at lines 1318--1319
 \OT1/cmr/m/n/12 in-di-ca-tor, week-day des-ig-na-tion, and their cor-re-spond-ing si-nu-soidal transformations---
  []
 
-[35
+[39
 
 ]
-<Figures/lineGraphLoad.png, id=632, 1003.8303pt x 332.442pt>
+<Figures/lineGraphLoad.png, id=709, 1003.8303pt x 332.442pt>
 File: Figures/lineGraphLoad.png Graphic file (type png)
 <use Figures/lineGraphLoad.png>
-Package pdftex.def Info: Figures/lineGraphLoad.png  used on input line 1278.
+Package pdftex.def Info: Figures/lineGraphLoad.png  used on input line 1324.
 (pdftex.def)             Requested size: 375.14705pt x 124.23933pt.
-<Figures/hourlyLoad.png, id=633, 508.7808pt x 323.0469pt>
+<Figures/hourlyLoad.png, id=710, 508.7808pt x 323.0469pt>
 File: Figures/hourlyLoad.png Graphic file (type png)
 <use Figures/hourlyLoad.png>
-Package pdftex.def Info: Figures/hourlyLoad.png  used on input line 1287.
+Package pdftex.def Info: Figures/hourlyLoad.png  used on input line 1333.
 (pdftex.def)             Requested size: 375.14705pt x 238.20805pt.
- [36 <./Figures/lineGraphLoad.png>]
-<Figures/averageload.png, id=639, 430.7292pt x 338.9463pt>
+ [40 <./Figures/lineGraphLoad.png>]
+<Figures/averageload.png, id=716, 430.7292pt x 338.9463pt>
 File: Figures/averageload.png Graphic file (type png)
 <use Figures/averageload.png>
-Package pdftex.def Info: Figures/averageload.png  used on input line 1296.
+Package pdftex.def Info: Figures/averageload.png  used on input line 1342.
 (pdftex.def)             Requested size: 291.78174pt x 229.61156pt.
- [37 <./Figures/hourlyLoad.png>]
-<Figures/timeAirTemp.png, id=645, 1193.45876pt x 592.2125pt>
+ [41 <./Figures/hourlyLoad.png>]
+<Figures/timeAirTemp.png, id=722, 1193.45876pt x 592.2125pt>
 File: Figures/timeAirTemp.png Graphic file (type png)
 <use Figures/timeAirTemp.png>
-Package pdftex.def Info: Figures/timeAirTemp.png  used on input line 1305.
+Package pdftex.def Info: Figures/timeAirTemp.png  used on input line 1351.
 (pdftex.def)             Requested size: 375.14705pt x 186.15031pt.
- [38 <./Figures/averageload.png>]
-<Figures/timeRadiation.png, id=652, 1193.45876pt x 592.2125pt>
+ [42 <./Figures/averageload.png>]
+<Figures/timeRadiation.png, id=728, 1193.45876pt x 592.2125pt>
 File: Figures/timeRadiation.png Graphic file (type png)
 <use Figures/timeRadiation.png>
-Package pdftex.def Info: Figures/timeRadiation.png  used on input line 1312.
+Package pdftex.def Info: Figures/timeRadiation.png  used on input line 1358.
 (pdftex.def)             Requested size: 375.14705pt x 186.15031pt.
-<Figures/timeHumidity.png, id=653, 1193.45876pt x 592.2125pt>
+<Figures/timeHumidity.png, id=729, 1193.45876pt x 592.2125pt>
 File: Figures/timeHumidity.png Graphic file (type png)
 <use Figures/timeHumidity.png>
-Package pdftex.def Info: Figures/timeHumidity.png  used on input line 1319.
+Package pdftex.def Info: Figures/timeHumidity.png  used on input line 1365.
 (pdftex.def)             Requested size: 375.14705pt x 186.15031pt.
- [39 <./Figures/timeAirTemp.png> <./Figures/timeRadiation.png>]
-<Figures/boxplot_comparison_before_after.png, id=659, 1004.553pt x 446.8695pt>
+ [43 <./Figures/timeAirTemp.png> <./Figures/timeRadiation.png>]
+<Figures/boxplot_comparison_before_after.png, id=736, 1004.553pt x 446.8695pt>
 File: Figures/boxplot_comparison_before_after.png Graphic file (type png)
 <use Figures/boxplot_comparison_before_after.png>
-Package pdftex.def Info: Figures/boxplot_comparison_before_after.png  used on input line 1334.
+Package pdftex.def Info: Figures/boxplot_comparison_before_after.png  used on input line 1380.
 (pdftex.def)             Requested size: 395.98996pt x 176.15353pt.
- [40 <./Figures/timeHumidity.png>] [41 <./Figures/boxplot_comparison_before_after.png>] [42] [43]
-<Figures/xboostActual.png, id=682, 1594.95876pt x 592.2125pt>
+ [44 <./Figures/timeHumidity.png>]
+<Figures/relativeHumidity.png, id=743, 605.6226pt x 231.264pt>
+File: Figures/relativeHumidity.png Graphic file (type png)
+<use Figures/relativeHumidity.png>
+Package pdftex.def Info: Figures/relativeHumidity.png  used on input line 1389.
+(pdftex.def)             Requested size: 375.14705pt x 143.25868pt.
+ [45 <./Figures/boxplot_comparison_before_after.png>]
+<Figures/airTemperature.png, id=749, 542.025pt x 205.2468pt>
+File: Figures/airTemperature.png Graphic file (type png)
+<use Figures/airTemperature.png>
+Package pdftex.def Info: Figures/airTemperature.png  used on input line 1396.
+(pdftex.def)             Requested size: 375.14705pt x 142.05888pt.
+<Figures/globalSolar.png, id=750, 614.295pt x 229.8186pt>
+File: Figures/globalSolar.png Graphic file (type png)
+<use Figures/globalSolar.png>
+Package pdftex.def Info: Figures/globalSolar.png  used on input line 1403.
+(pdftex.def)             Requested size: 375.14705pt x 140.35045pt.
+ [46 <./Figures/relativeHumidity.png> <./Figures/airTemperature.png> <./Figures/globalSolar.png>] [47] [48] [49]
+<Figures/xboostActual.png, id=777, 1594.95876pt x 592.2125pt>
 File: Figures/xboostActual.png Graphic file (type png)
 <use Figures/xboostActual.png>
-Package pdftex.def Info: Figures/xboostActual.png  used on input line 1447.
+Package pdftex.def Info: Figures/xboostActual.png  used on input line 1518.
 (pdftex.def)             Requested size: 375.14705pt x 139.28743pt.
- [44 <./Figures/xboostActual.png>] [45]
-Overfull \hbox (22.31694pt too wide) in paragraph at lines 1516--1517
+ [50 <./Figures/xboostActual.png>] [51]
+Overfull \hbox (22.31694pt too wide) in paragraph at lines 1587--1588
 \OT1/cmr/m/n/12 Deep neu-ral net-work implementations---encompassing LSTM and GRU architectures---
  []
 
-<Figures/gruActual.png, id=694, 1076.1003pt x 349.7868pt>
+[52]
+<Figures/gruActual.png, id=794, 1076.1003pt x 349.7868pt>
 File: Figures/gruActual.png Graphic file (type png)
 <use Figures/gruActual.png>
-Package pdftex.def Info: Figures/gruActual.png  used on input line 1524.
+Package pdftex.def Info: Figures/gruActual.png  used on input line 1597.
 (pdftex.def)             Requested size: 395.98996pt x 128.71455pt.
-[46] [47 <./Figures/gruActual.png>] [48
+ [53 <./Figures/gruActual.png>] [54
 
 ]
-Overfull \hbox (0.28362pt too wide) in paragraph at lines 1557--1558
+Overfull \hbox (0.28362pt too wide) in paragraph at lines 1630--1631
 \OT1/cmr/m/n/12 Although the study achieved strong fore-cast-ing ac-cu-racy, sev-eral lim-i-ta-tions should
  []
 
-[49] [50] [51] [52
+[55] [56] [57] [58] [59
 
-] [53] [54] (thesis.aux)
+] [60] [61] [62] (thesis.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: BAC0E87B62760B09EC4204DC9FCF9A2B;8609.
+(rerunfilecheck)             Checksum: 589F75879DED4F880B1CD72A2D55E643;9653.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21659 strings out of 467871
- 383826 string characters out of 5428435
- 1327078 words of memory out of 5000000
- 50066 multiletter control sequences out of 15000+600000
+ 21784 strings out of 467871
+ 387301 string characters out of 5428435
+ 1328092 words of memory out of 5000000
+ 50160 multiletter control sequences out of 15000+600000
  633547 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,79p,2228b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,79p,2750b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Haitomns\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1200.pk> <C:\Users\Haitomns\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (65 pages, 7278532 bytes).
+Output written on thesis.pdf (74 pages, 7363411 bytes).
 PDF statistics:
- 872 PDF objects out of 1000 (max. 8388607)
- 241 named destinations out of 1000 (max. 500000)
- 468 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 991 PDF objects out of 1000 (max. 8388607)
+ 272 named destinations out of 1000 (max. 500000)
+ 515 words of extra memory for PDF output out of 10000 (max. 10000000)
 

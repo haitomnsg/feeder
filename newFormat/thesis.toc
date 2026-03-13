@@ -1,72 +1,76 @@
 \contentsline {section}{Copyright}{i}{section*.1}%
 \contentsline {section}{Approval page}{ii}{section*.2}%
 \contentsline {section}{Abstract}{iii}{section*.4}%
-\contentsline {section}{Acknowledgements}{iv}{section*.5}%
-\contentsline {section}{Table of contents}{v}{section*.6}%
-\contentsline {section}{List of tables}{vii}{section*.7}%
-\contentsline {section}{List of figures}{viii}{section*.8}%
-\contentsline {section}{List of acronyms and abbreviations}{ix}{section*.9}%
+\contentsline {section}{Acknowledgements}{v}{section*.5}%
+\contentsline {section}{Table of contents}{vi}{section*.6}%
+\contentsline {section}{List of tables}{viii}{section*.7}%
+\contentsline {section}{List of figures}{ix}{section*.8}%
+\contentsline {section}{List of acronyms and abbreviations}{x}{section*.9}%
 \contentsline {chapter}{\textbf {CHAPTER ONE: INTRODUCTION}}{1}{chapter*.10}%
 \contentsline {section}{\numberline {1.1.{}}\fontsize {12pt}{6pt}\selectfont Background}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2.{}}\fontsize {12pt}{6pt}\selectfont Problem Statement}{3}{section.1.2}%
-\contentsline {section}{\numberline {1.3.{}}\fontsize {12pt}{6pt}\selectfont Objectives}{3}{section.1.3}%
-\contentsline {section}{\numberline {1.4.{}}\fontsize {12pt}{6pt}\selectfont Scope and Limitations}{4}{section.1.4}%
-\contentsline {section}{\numberline {1.5.{}}\fontsize {12pt}{6pt}\selectfont Report Organization}{5}{section.1.5}%
-\contentsline {chapter}{\textbf {CHAPTER TWO: LITERATURE REVIEW}}{7}{chapter*.12}%
-\contentsline {section}{\numberline {2.1.{}}\fontsize {12pt}{6pt}\selectfont Related Works}{7}{section.2.1}%
-\contentsline {section}{\numberline {2.2.{}}\fontsize {12pt}{6pt}\selectfont Theoretical Background of Forecasting Models}{10}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1.{}}\fontsize {12pt}{6pt}\selectfont Machine Learning Models}{10}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1.{}}Linear Regression}{10}{subsubsection.2.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.2.{}}Ridge Regression}{11}{subsubsection.2.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.2.1.3.{}}Support Vector Regression (SVR)}{11}{subsubsection.2.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.2.1.4.{}}Random Forest Regressor}{12}{subsubsection.2.2.1.4}%
-\contentsline {subsubsection}{\numberline {2.2.1.5.{}}Gradient Boosting Regressor}{12}{subsubsection.2.2.1.5}%
-\contentsline {subsubsection}{\numberline {2.2.1.6.{}}XGBoost Regressor}{13}{subsubsection.2.2.1.6}%
-\contentsline {subsection}{\numberline {2.2.2.{}}\fontsize {12pt}{6pt}\selectfont Deep Learning Models}{14}{subsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.2.1.{}}Long Short-Term Memory (LSTM)}{14}{subsubsection.2.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2.2.{}}Gated Recurrent Unit (GRU)}{16}{subsubsection.2.2.2.2}%
-\contentsline {chapter}{\textbf {CHAPTER THREE: RESEARCH METHODOLOGY}}{18}{chapter*.15}%
-\contentsline {section}{\numberline {3.1.{}}\fontsize {12pt}{6pt}\selectfont Overall Workflow}{18}{section.3.1}%
-\contentsline {section}{\numberline {3.2.{}}\fontsize {12pt}{6pt}\selectfont Data Acquisition}{19}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1.{}}\fontsize {12pt}{6pt}\selectfont Data Sources}{20}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2.{}}\fontsize {12pt}{6pt}\selectfont Load Data Acquisition and Structuring Process}{21}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3.{}}\fontsize {12pt}{6pt}\selectfont Weather Data Acquisition and Structuring}{22}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4.{}}\fontsize {12pt}{6pt}\selectfont Final Merging of Load and Weather Data}{23}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3.{}}\fontsize {12pt}{6pt}\selectfont Data Preprocessing}{23}{section.3.3}%
-\contentsline {section}{\numberline {3.4.{}}\fontsize {12pt}{6pt}\selectfont Model Development}{25}{section.3.4}%
-\contentsline {section}{\numberline {3.5.{}}\fontsize {12pt}{6pt}\selectfont Model Training and Validation}{26}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1.{}}\fontsize {12pt}{6pt}\selectfont Training of Machine Learning Models}{26}{subsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.1.1.{}}Input Preparation}{26}{subsubsection.3.5.1.1}%
-\contentsline {subsubsection}{\numberline {3.5.1.2.{}}Data Splitting}{27}{subsubsection.3.5.1.2}%
-\contentsline {subsubsection}{\numberline {3.5.1.3.{}}Feature Scaling}{27}{subsubsection.3.5.1.3}%
-\contentsline {subsubsection}{\numberline {3.5.1.4.{}}Training Procedure}{27}{subsubsection.3.5.1.4}%
-\contentsline {subsubsection}{\numberline {3.5.1.5.{}}Hyperparameter Tuning}{27}{subsubsection.3.5.1.5}%
-\contentsline {subsection}{\numberline {3.5.2.{}}\fontsize {12pt}{6pt}\selectfont Training of Deep Learning Models}{28}{subsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.2.1.{}}Sequence Construction}{28}{subsubsection.3.5.2.1}%
-\contentsline {subsubsection}{\numberline {3.5.2.2.{}}Train--Validation--Test Split}{28}{subsubsection.3.5.2.2}%
-\contentsline {subsubsection}{\numberline {3.5.2.3.{}}Lag Feature Configurations}{29}{subsubsection.3.5.2.3}%
-\contentsline {subsubsection}{\numberline {3.5.2.4.{}}Data Augmentation}{29}{subsubsection.3.5.2.4}%
-\contentsline {subsubsection}{\numberline {3.5.2.5.{}}Feature Scaling}{29}{subsubsection.3.5.2.5}%
-\contentsline {subsubsection}{\numberline {3.5.2.6.{}}Model Training Configuration}{30}{subsubsection.3.5.2.6}%
-\contentsline {subsubsection}{\numberline {3.5.2.7.{}}Regularization and Stability}{30}{subsubsection.3.5.2.7}%
-\contentsline {subsubsection}{\numberline {3.5.2.8.{}}Model-Specific Training Notes}{30}{subsubsection.3.5.2.8}%
-\contentsline {subsection}{\numberline {3.5.3.{}}\fontsize {12pt}{6pt}\selectfont Validation Approach}{31}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6.{}}\fontsize {12pt}{6pt}\selectfont Performance Evaluation}{31}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1.{}}\fontsize {12pt}{6pt}\selectfont Mean Absolute Error (MAE)}{32}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2.{}}\fontsize {12pt}{6pt}\selectfont Root Mean Squared Error (RMSE)}{32}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3.{}}\fontsize {12pt}{6pt}\selectfont Mean Absolute Percentage Error (MAPE)}{33}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4.{}}\fontsize {12pt}{6pt}\selectfont Coefficient of Determination (R\textsuperscript {2} Score)}{33}{subsection.3.6.4}%
-\contentsline {chapter}{\textbf {CHAPTER FOUR: RESULTS AND DISCUSSION}}{35}{chapter*.18}%
-\contentsline {section}{\numberline {4.1.{}}\fontsize {12pt}{6pt}\selectfont Exploratory Data Analysis}{35}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1.{}}\fontsize {12pt}{6pt}\selectfont Outlier Treatment}{40}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2.{}}\fontsize {12pt}{6pt}\selectfont Model Performance Results}{41}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1.{}}\fontsize {12pt}{6pt}\selectfont Machine Learning Model Performance}{41}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1.{}}Discussion of Results}{43}{subsubsection.4.2.1.1}%
-\contentsline {subsection}{\numberline {4.2.2.{}}\fontsize {12pt}{6pt}\selectfont Deep Learning Model Performance}{44}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1.{}}Discussion of Results}{46}{subsubsection.4.2.2.1}%
-\contentsline {chapter}{\textbf {CHAPTER FIVE: CONCLUSION}}{48}{chapter*.33}%
-\contentsline {section}{\numberline {5.1.{}}\fontsize {12pt}{6pt}\selectfont Conclusion}{48}{section.5.1}%
-\contentsline {section}{\numberline {5.2.{}}\fontsize {12pt}{6pt}\selectfont Research Limitations}{49}{section.5.2}%
-\contentsline {section}{\numberline {5.3.{}}\fontsize {12pt}{6pt}\selectfont Implications}{50}{section.5.3}%
-\contentsline {section}{\numberline {5.4.{}}\fontsize {12pt}{6pt}\selectfont Future Work}{51}{section.5.4}%
-\contentsline {chapter}{\normalfont REFERENCES}{51}{Item.36}%
+\contentsline {section}{\numberline {1.2.{}}\fontsize {12pt}{6pt}\selectfont Problem Statement}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3.{}}\fontsize {12pt}{6pt}\selectfont Objectives}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4.{}}\fontsize {12pt}{6pt}\selectfont Scope and Limitations}{5}{section.1.4}%
+\contentsline {section}{\numberline {1.5.{}}\fontsize {12pt}{6pt}\selectfont Report Organization}{7}{section.1.5}%
+\contentsline {chapter}{\textbf {CHAPTER TWO: LITERATURE REVIEW}}{8}{chapter*.12}%
+\contentsline {section}{\numberline {2.1.{}}\fontsize {12pt}{6pt}\selectfont Related Works}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2.{}}\fontsize {12pt}{6pt}\selectfont Electricity Markets and Load Forecasting}{11}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1.{}}\fontsize {12pt}{6pt}\selectfont Structure of Electricity Markets}{11}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2.{}}\fontsize {12pt}{6pt}\selectfont Role of Load Forecasting in Market Operations}{12}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3.{}}\fontsize {12pt}{6pt}\selectfont Relevance to Nepal's Power Sector}{13}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3.{}}\fontsize {12pt}{6pt}\selectfont Theoretical Background of Forecasting Models}{14}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1.{}}\fontsize {12pt}{6pt}\selectfont Machine Learning Models}{14}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1.{}}Linear Regression}{14}{subsubsection.2.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.2.{}}Ridge Regression}{14}{subsubsection.2.3.1.2}%
+\contentsline {subsubsection}{\numberline {2.3.1.3.{}}Support Vector Regression (SVR)}{15}{subsubsection.2.3.1.3}%
+\contentsline {subsubsection}{\numberline {2.3.1.4.{}}Random Forest Regressor}{16}{subsubsection.2.3.1.4}%
+\contentsline {subsubsection}{\numberline {2.3.1.5.{}}Gradient Boosting Regressor}{16}{subsubsection.2.3.1.5}%
+\contentsline {subsubsection}{\numberline {2.3.1.6.{}}XGBoost Regressor}{17}{subsubsection.2.3.1.6}%
+\contentsline {subsection}{\numberline {2.3.2.{}}\fontsize {12pt}{6pt}\selectfont Deep Learning Models}{17}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1.{}}Long Short-Term Memory (LSTM)}{18}{subsubsection.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.3.2.2.{}}Gated Recurrent Unit (GRU)}{19}{subsubsection.2.3.2.2}%
+\contentsline {chapter}{\textbf {CHAPTER THREE: RESEARCH METHODOLOGY}}{22}{chapter*.15}%
+\contentsline {section}{\numberline {3.1.{}}\fontsize {12pt}{6pt}\selectfont Overall Workflow}{22}{section.3.1}%
+\contentsline {section}{\numberline {3.2.{}}\fontsize {12pt}{6pt}\selectfont Data Acquisition}{24}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1.{}}\fontsize {12pt}{6pt}\selectfont Data Sources}{25}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2.{}}\fontsize {12pt}{6pt}\selectfont Load Data Acquisition and Structuring Process}{26}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3.{}}\fontsize {12pt}{6pt}\selectfont Weather Data Acquisition and Structuring}{27}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4.{}}\fontsize {12pt}{6pt}\selectfont Final Merging of Load and Weather Data}{27}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3.{}}\fontsize {12pt}{6pt}\selectfont Data Preprocessing}{28}{section.3.3}%
+\contentsline {section}{\numberline {3.4.{}}\fontsize {12pt}{6pt}\selectfont Model Development}{30}{section.3.4}%
+\contentsline {section}{\numberline {3.5.{}}\fontsize {12pt}{6pt}\selectfont Model Training and Validation}{30}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1.{}}\fontsize {12pt}{6pt}\selectfont Training of Machine Learning Models}{30}{subsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.1.{}}Input Preparation}{31}{subsubsection.3.5.1.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.2.{}}Data Splitting}{31}{subsubsection.3.5.1.2}%
+\contentsline {subsubsection}{\numberline {3.5.1.3.{}}Feature Scaling}{31}{subsubsection.3.5.1.3}%
+\contentsline {subsubsection}{\numberline {3.5.1.4.{}}Training Procedure}{31}{subsubsection.3.5.1.4}%
+\contentsline {subsubsection}{\numberline {3.5.1.5.{}}Hyperparameter Tuning}{32}{subsubsection.3.5.1.5}%
+\contentsline {subsection}{\numberline {3.5.2.{}}\fontsize {12pt}{6pt}\selectfont Training of Deep Learning Models}{32}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1.{}}Sequence Construction}{33}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2.{}}Train--Validation--Test Split}{33}{subsubsection.3.5.2.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.3.{}}Lag Feature Configurations}{33}{subsubsection.3.5.2.3}%
+\contentsline {subsubsection}{\numberline {3.5.2.4.{}}Data Augmentation}{34}{subsubsection.3.5.2.4}%
+\contentsline {subsubsection}{\numberline {3.5.2.5.{}}Feature Scaling}{34}{subsubsection.3.5.2.5}%
+\contentsline {subsubsection}{\numberline {3.5.2.6.{}}Model Training Configuration}{34}{subsubsection.3.5.2.6}%
+\contentsline {subsubsection}{\numberline {3.5.2.7.{}}Regularization and Stability}{35}{subsubsection.3.5.2.7}%
+\contentsline {subsubsection}{\numberline {3.5.2.8.{}}Model-Specific Training Notes}{35}{subsubsection.3.5.2.8}%
+\contentsline {subsection}{\numberline {3.5.3.{}}\fontsize {12pt}{6pt}\selectfont Validation Approach}{35}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6.{}}\fontsize {12pt}{6pt}\selectfont Performance Evaluation}{36}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1.{}}\fontsize {12pt}{6pt}\selectfont Mean Absolute Error (MAE)}{36}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2.{}}\fontsize {12pt}{6pt}\selectfont Root Mean Squared Error (RMSE)}{37}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3.{}}\fontsize {12pt}{6pt}\selectfont Mean Absolute Percentage Error (MAPE)}{37}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4.{}}\fontsize {12pt}{6pt}\selectfont Coefficient of Determination (R\textsuperscript {2} Score)}{38}{subsection.3.6.4}%
+\contentsline {chapter}{\textbf {CHAPTER FOUR: RESULTS AND DISCUSSION}}{39}{chapter*.18}%
+\contentsline {section}{\numberline {4.1.{}}\fontsize {12pt}{6pt}\selectfont Exploratory Data Analysis}{39}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1.{}}\fontsize {12pt}{6pt}\selectfont Outlier Treatment}{44}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2.{}}\fontsize {12pt}{6pt}\selectfont Model Performance Results}{47}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1.{}}\fontsize {12pt}{6pt}\selectfont Machine Learning Model Performance}{47}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1.{}}Discussion of Results}{49}{subsubsection.4.2.1.1}%
+\contentsline {subsection}{\numberline {4.2.2.{}}\fontsize {12pt}{6pt}\selectfont Deep Learning Model Performance}{51}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1.{}}Discussion of Results}{52}{subsubsection.4.2.2.1}%
+\contentsline {chapter}{\textbf {CHAPTER FIVE: CONCLUSION}}{54}{chapter*.36}%
+\contentsline {section}{\numberline {5.1.{}}\fontsize {12pt}{6pt}\selectfont Conclusion}{54}{section.5.1}%
+\contentsline {section}{\numberline {5.2.{}}\fontsize {12pt}{6pt}\selectfont Research Limitations}{55}{section.5.2}%
+\contentsline {section}{\numberline {5.3.{}}\fontsize {12pt}{6pt}\selectfont Implications}{56}{section.5.3}%
+\contentsline {section}{\numberline {5.4.{}}\fontsize {12pt}{6pt}\selectfont Future Work}{57}{section.5.4}%
+\contentsline {chapter}{\normalfont REFERENCES}{58}{Item.43}%
